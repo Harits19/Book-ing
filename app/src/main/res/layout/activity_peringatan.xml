@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Tunggu\nTimer Habis"
+        android:gravity="center"
+
+        android:textSize="32sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="12:30"
+        android:gravity="center"
+        android:paddingTop="80dp"
+        android:paddingBottom="100dp"
+        android:textSize="72sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Ayo Ambil dan Baca Bukumu Sekarang :)"
+        android:gravity="center"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_width="match_parent"
+        android:text="Scan Buku"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:layout_height="64dp"/>
+    <Button
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_width="match_parent"
+        android:text="Menyerah :("
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:layout_height="64dp"/>
+
+
+</LinearLayout>

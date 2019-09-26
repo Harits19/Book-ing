@@ -25,79 +25,75 @@
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:layout_marginLeft="24dp"
             android:layout_marginRight="24dp"
             android:hint="Nama Tantangan"
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
             android:layout_marginRight="24dp"
             android:hint="Judul Buku"
-            android:layout_marginTop="16dp"
 
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:layout_marginRight="24dp"
             android:text="Waktu"
             android:textSize="16sp" />
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
+            android:layout_marginTop="24dp"
             android:layout_marginRight="24dp"
             android:hint="Mulai"
-            android:layout_marginTop="16dp"
 
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
+            android:layout_marginTop="24dp"
             android:layout_marginRight="24dp"
             android:hint="Berakhir"
-            android:layout_marginTop="16dp"
 
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
             android:layout_marginRight="24dp"
             android:hint="Durasi"
-            android:layout_marginTop="16dp"
 
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:layout_marginRight="24dp"
             android:text="Publik"
             android:textSize="16sp" />
+
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:layout_marginRight="24dp"
             android:text="Privasi"
             android:textSize="16sp" />
@@ -113,7 +109,7 @@
         android:textSize="16sp"
         android:layout_alignParentBottom="true"
         android:layout_height="64dp"
-        android:layout_margin="16dp"
+        android:layout_margin="24dp"
         />
 
 </RelativeLayout>

@@ -38,13 +38,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Budiman Harimau"
-            android:textSize="24sp"/>
+            android:textSize="16sp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="4 September 2019"
-            android:textSize="24sp"/>
+            android:textSize="16sp" />
         <Button
             style="@style/CustomButton1"
             android:layout_width="match_parent"

@@ -18,7 +18,7 @@
         <activity android:name=".ActivityWelcome">
         </activity>
 
-        <activity android:name=".ActivityTransaksiPenukaran">
+        <activity android:name=".ActivityKatalog">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -56,9 +56,7 @@ public class ActivityTransaksiPenukaran extends AppCompatActivity {
         ongkir = findViewById(R.id.ongkir);
 
         progressBar = findViewById(R.id.progressBar1);
-        progressBar.setMax(10);
-        progressBar.setVisibility(View.VISIBLE);
-        progressBar.setProgress(0);
+
 
 
         mQueue = Volley.newRequestQueue(this);
@@ -184,6 +182,7 @@ public class ActivityTransaksiPenukaran extends AppCompatActivity {
         JSONParse(String url, String keterangan) {
             this.url = url;
             this.keterangan = keterangan;
+            progressBar.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -202,6 +201,7 @@ public class ActivityTransaksiPenukaran extends AppCompatActivity {
                         @Override
                         public void onResponse(JSONObject response) {
                             try {
+
 
                                 if (keterangan.equals("kota")) {
                                     JSONArray jsonArray = response.getJSONArray("result");
@@ -299,8 +299,8 @@ public class ActivityTransaksiPenukaran extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(JSONObject json) {
-            progressBar.setVisibility(View.GONE);
 
+            progressBar.setVisibility(View.GONE);
 
 
         }

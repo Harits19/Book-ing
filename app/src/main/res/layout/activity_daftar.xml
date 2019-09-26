@@ -50,6 +50,7 @@
         tools:layout_editor_absoluteX="24dp" />
 
     <Button
+        style="@style/CustomButton1"
         android:layout_width="match_parent"
         android:text="Daftar"
         android:textAllCaps="false"

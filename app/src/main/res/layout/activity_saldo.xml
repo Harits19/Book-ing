@@ -101,6 +101,7 @@
     </LinearLayout>
 
     <Button
+        style="@style/CustomButton1"
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:text="Isi Saldo"

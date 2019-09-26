@@ -107,6 +107,7 @@
     </LinearLayout>
 
     <Button
+        style="@style/CustomButton1"
         android:layout_width="match_parent"
         android:text="Tambah Tantangan"
         android:textAllCaps="false"

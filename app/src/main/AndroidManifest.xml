@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.book_ing">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,6 +16,9 @@
         <activity android:name=".ActivityDaftar" />
         <activity android:name=".ActivityMasuk" />
         <activity android:name=".ActivityWelcome">
+        </activity>
+
+        <activity android:name=".ActivityTransaksiPenukaran">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -72,13 +72,15 @@
 
 
             <Button
+                style="@style/CustomButton1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="8dp"
+                android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:text="Ubah"
+                android:text="Ikuti"
                 android:textAllCaps="false"
                 android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 

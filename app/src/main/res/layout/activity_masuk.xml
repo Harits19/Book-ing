@@ -29,6 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
+        style="@style/CustomButton1"
         android:layout_width="match_parent"
         android:text="Masuk"
         android:textAllCaps="false"

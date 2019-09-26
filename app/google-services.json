@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "886084695922",
+    "firebase_url": "https://fir-booking-9e529.firebaseio.com",
+    "project_id": "fir-booking-9e529",
+    "storage_bucket": "fir-booking-9e529.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886084695922:android:468a7b299cf7a85da44feb",
+        "android_client_info": {
+          "package_name": "com.example.book_ing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "886084695922-3db2f983na67re42ris9rsmjkk9eognn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.book_ing",
+            "certificate_hash": "5ec2556097ddbbccef0e8b6bb32ea0d998dfb8a5"
+          }
+        },
+        {
+          "client_id": "886084695922-qov87378ga9nb9m34fo7oi821q0sac96.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSd8JkgJH4Vs6E19LcKNm2enE1fZ4MnMc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "886084695922-qov87378ga9nb9m34fo7oi821q0sac96.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

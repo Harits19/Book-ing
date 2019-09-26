@@ -14,11 +14,11 @@
         <activity android:name=".FragmentAkun"></activity>
         <activity android:name=".FragmentBeranda" />
         <activity android:name=".ActivityDaftar" />
-        <activity android:name=".ActivityMasuk" />
+        <activity android:name=".ActivityTransaksiPenukaran" />
         <activity android:name=".ActivityWelcome">
         </activity>
 
-        <activity android:name=".ActivityTransaksiPenukaran">
+        <activity android:name=".ActivityMasuk">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

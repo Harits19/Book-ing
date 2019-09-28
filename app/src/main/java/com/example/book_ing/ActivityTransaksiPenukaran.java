@@ -2,9 +2,6 @@ package com.example.book_ing;
 
 import android.app.ActionBar;
 import android.app.Dialog;
-import android.app.ProgressDialog;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +14,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -24,7 +24,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.example.book_ing.Recyclerview_Kurir.Kurir;
+import com.example.book_ing.Recyclerview_Kurir.KurirAdapter;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,6 +33,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class ActivityTransaksiPenukaran extends AppCompatActivity {
 
@@ -44,23 +46,37 @@ public class ActivityTransaksiPenukaran extends AppCompatActivity {
     ArrayList<String> ListService = new ArrayList<String>();
     TextView ongkir;
     ProgressBar progressBar;
+    Dialog myDialog;
+    View sheetView;
+    ArrayList<Kurir> ListKurir = new ArrayList<>();
     private String idKecamatanAsal, idKotaAsal, idKecamatanTujuan, idKotaTujuan;
     private RequestQueue mQueue;
+    private RecyclerView recyclerView;
 
+
+
+    SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaksi_penukaran);
 
+        swipeRefreshLayout = findViewById(R.id.swipe_refresh_layout);
+
+
         ongkir = findViewById(R.id.ongkir);
 
-        progressBar = findViewById(R.id.progressBar1);
 
+        progressBar = findViewById(R.id.progressBar1);
+        recyclerView = findViewById(R.id.recyclerView);
 
 
         mQueue = Volley.newRequestQueue(this);
-        new JSONParse("http://api.shipping.esoftplay.com/city", "kota").execute();
+        progressBar.setVisibility(View.VISIBLE);
+        new ParseJSON("http://api.shipping.esoftplay.com/city", "kota").execute();
+
+
 
         //AUTO COMPLETE TEXT UNTUK KOTA
         ArrayAdapter<String> adapterKota = new ArrayAdapter<String>(this,
@@ -93,7 +109,7 @@ public class ActivityTransaksiPenukaran extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View arg1, int pos, long id) {
 
                 idKotaAsal = String.valueOf(ListKota.indexOf(KotaAsal.getText().toString()) + 1);
-                new JSONParse("http://api.shipping.esoftplay.com/subdistrict/" + idKotaAsal, "kecamatanAsal").execute();
+                new ParseJSON("http://api.shipping.esoftplay.com/subdistrict/" + idKotaAsal, "kecamatanAsal").execute();
                 Log.d("url1", idKotaAsal);
 
 
@@ -105,7 +121,7 @@ public class ActivityTransaksiPenukaran extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View arg1, int pos, long id) {
 
                 idKotaTujuan = String.valueOf(ListKota.indexOf(KotaTujuan.getText().toString()) + 1);
-                new JSONParse("http://api.shipping.esoftplay.com/subdistrict/" + idKotaTujuan, "kecamatanTujuan").execute();
+                new ParseJSON("http://api.shipping.esoftplay.com/subdistrict/" + idKotaTujuan, "kecamatanTujuan").execute();
                 Log.d("url2", idKotaTujuan);
 
 
@@ -137,7 +153,7 @@ public class ActivityTransaksiPenukaran extends AppCompatActivity {
                 idKecamatanTujuan = String.valueOf(ListIdKecamatanTujuan.get(indeksSubdistrict));
                 Log.d("idKecamatanTujuan", idKecamatanTujuan);
 
-                new JSONParse("http://api.shipping.esoftplay.com/domesticCost/"+ idKecamatanAsal +"/"+idKecamatanTujuan+"/100/jne/subdistrict/subdistrict", "ongkosKirim").execute();
+//                new ParseJSON("http://api.shipping.esoftplay.com/domesticCost/" + idKecamatanAsal + "/" + idKecamatanTujuan + "/100/jne/subdistrict/subdistrict", "ongkosKirim").execute();
 
 
             }
@@ -161,39 +177,48 @@ public class ActivityTransaksiPenukaran extends AppCompatActivity {
         buttonPilihKurir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myDialog.setContentView(sheetView);
-                myDialog.getWindow().setLayout(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT );
-                myDialog.show();
+//                myDialog.setContentView(sheetView);
+//                myDialog.getWindow().setLayout(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT);
+//                myDialog.show();
+                new ParseJSON("http://api.shipping.esoftplay.com/domesticCost/2743/6991/100/jne/subdistrict/subdistrict", "ongkosKirim").execute();
 
             }
         });
 
 
     }
-    Dialog myDialog;
-    View sheetView;
 
-    private class JSONParse extends AsyncTask<String, String, JSONObject> {
+    public void setRecyclerViewAdapter(ArrayList<Kurir> lst) {
+
+        KurirAdapter myAdapter = new KurirAdapter(this, lst);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(myAdapter);
+
+
+    }
+
+    private class ParseJSON extends AsyncTask<String, String, JSONObject> {
 
 
         String url;
         String keterangan;
 
-        JSONParse(String url, String keterangan) {
+        ParseJSON(String url, String keterangan) {
             this.url = url;
             this.keterangan = keterangan;
-            progressBar.setVisibility(View.VISIBLE);
         }
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
+            progressBar.setVisibility(View.VISIBLE);
+            progressBar.showContextMenu();
+            Log.e("AsyncStatus", "spinner shown");
 
         }
 
         @Override
         protected JSONObject doInBackground(String... args) {
-
 
 
             JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
@@ -246,36 +271,53 @@ public class ActivityTransaksiPenukaran extends AppCompatActivity {
                                 } else if (keterangan.equals("ongkosKirim")) {
                                     Log.d("Cok", "Cok");
 
+
                                     JSONArray result = response.getJSONArray("result");
+
                                     for (int i = 0; i < result.length(); i++) {
-                                        final JSONObject e = result.getJSONObject(i);
+
+                                        JSONObject e = result.getJSONObject(i);
                                         JSONArray costs = e.getJSONArray("costs");
                                         for (int j = 0; j < costs.length(); j++) {
-                                            final JSONObject f = costs.getJSONObject(j);
+                                            Kurir kurir = new Kurir();
+                                            JSONObject f = costs.getJSONObject(j);
                                             String service = f.getString("service");
+                                            Log.d("bug", service);
+                                            kurir.setService(service);
                                             ListService.add(service);
                                             JSONArray cost = f.getJSONArray("cost");
-                                            for(int k=0; k < cost.length(); k++){
-                                                final JSONObject g = cost.getJSONObject(k);
+//                                            Log.d("long", "" + costs.length());
+//                                            for (int k = 0; k < cost.length(); k++) {
+                                                JSONObject g = cost.getJSONObject(0);
                                                 String harga = g.getString("value");
+                                                kurir.setHarga(harga);
                                                 String etd = g.getString("etd");
+                                                kurir.setEstimasi(etd);
+
+                                                ListKurir.add(kurir);
 
                                                 ListService.add(harga);
                                                 ListService.add(etd);
-                                            }
+
+
+//                                            }
 
                                         }
 
 
                                     }
+                                    Log.d("value", ListKurir.get(0).getService() + "");
+                                    Log.d("value", ListKurir.get(1).getService() + "");
+                                    Log.d("value", ListKurir.get(2).getService() + "");
 
-                                    for(int z=0; z < ListService.size(); z++){
+
+
+                                    for (int z = 0; z < ListService.size(); z++) {
                                         ongkir.append(ListService.get(z));
                                     }
 
 
-
-                                }else {
+                                } else {
 
                                 }
 
@@ -283,6 +325,8 @@ public class ActivityTransaksiPenukaran extends AppCompatActivity {
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
+                            setRecyclerViewAdapter(ListKurir);
+
                         }
                     }, new Response.ErrorListener() {
                 @Override
@@ -304,6 +348,8 @@ public class ActivityTransaksiPenukaran extends AppCompatActivity {
 
 
         }
+
+
     }
 
 

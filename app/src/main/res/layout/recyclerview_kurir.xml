@@ -33,18 +33,21 @@
                 android:textSize="12sp" />
 
             <TextView
+                android:id="@+id/textview_service"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="REG"
                 android:textSize="12sp" />
 
             <TextView
+                android:id="@+id/textview_harga"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Rp 8.000"
                 android:textSize="12sp" />
 
             <TextView
+                android:id="@+id/textview_estimasi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="2-3 Hari"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".FragmentAkun">
+    tools:context=".Fragment.FragmentAkun">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -130,7 +130,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
     <RelativeLayout
-        android:id="@+id/recyclerView"
+        android:id="@+id/recyclerview_tantangan"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:background="#ffff"
@@ -149,7 +149,7 @@
             android:textSize="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+            app:layout_constraintTop_toBottomOf="@+id/recyclerview_tantangan" />
 
         <RelativeLayout
             android:layout_width="match_parent"

@@ -1,6 +1,5 @@
 package com.example.book_ing;
 
-import android.app.ActionBar;
 import android.app.Dialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -32,8 +31,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class ActivityTransaksiPenukaran extends AppCompatActivity {
 
@@ -69,7 +66,7 @@ public class ActivityTransaksiPenukaran extends AppCompatActivity {
 
 
         progressBar = findViewById(R.id.progressBar1);
-        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerview_tantangan);
 
 
         mQueue = Volley.newRequestQueue(this);

@@ -31,20 +31,20 @@
             android:text="Permintaan Tukar"
             android:textStyle="bold"
             android:layout_marginTop="8dp"
-            android:textSize="24sp"/>
+            android:textSize="16sp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Higher Education"
-            android:textSize="24sp"/>
+            android:textSize="16sp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="5 Hari"
-            android:textSize="24sp"/>
+            android:textSize="16sp"/>
        <LinearLayout
            android:layout_width="match_parent"
            android:layout_height="wrap_content"

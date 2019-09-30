@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityMasuk">
+    tools:context=".Welcome.ActivityMasuk">
 
     <TextView
         android:id="@+id/textView3"
@@ -29,13 +29,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
+        android:id="@+id/button_masuk"
         style="@style/CustomButton1"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
         android:text="Masuk"
         android:textAllCaps="false"
         android:textSize="16sp"
-        android:layout_height="64dp"
-        android:layout_margin="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

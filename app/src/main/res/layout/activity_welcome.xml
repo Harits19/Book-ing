@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityWelcome">
+    tools:context=".Welcome.ActivityWelcome">
 
     <TextView
         android:id="@+id/textView"
@@ -41,7 +41,7 @@
         android:layout_marginRight="24dp"
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
@@ -49,10 +49,10 @@
         app:layout_constraintStart_toStartOf="@+id/linearLayout2">
 
         <Button
-            android:id="@+id/masukButton"
+            android:id="@+id/button_masuk"
             style="@style/CustomButton1"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Masuk"
             android:textAllCaps="false"
@@ -62,7 +62,8 @@
             style="@style/CustomButton1"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="match_parent"
+            android:id="@+id/button_daftar"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:text="Daftar"
             android:textAllCaps="false"
@@ -82,17 +83,18 @@
         <Button
             style="@style/CustomButton1"
             android:layout_width="match_parent"
-            android:layout_height="64dp"
+            android:layout_height="wrap_content"
             android:textAllCaps="false"
+            android:id="@+id/button_facebook"
             android:layout_marginTop="16dp"
             android:textSize="16sp"
             android:text="Masuk Dengan Facebook"/>
 
         <Button
-            android:id="@+id/googleButton"
+            android:id="@+id/button_google"
             style="@style/CustomButton1"
             android:layout_width="match_parent"
-            android:layout_height="64dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Masuk Dengan Google"
             android:textAllCaps="false"

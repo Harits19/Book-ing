@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/beranda_menu"
+        android:title="Beranda"
+        />
+
+    <item
+        android:id="@+id/transaksi_menu"
+        android:title="Transaksi"
+        />
+
+    <item
+        android:id="@+id/pesan_menu"
+        android:title="Pesan"
+        />
+    <item
+        android:id="@+id/akun_menu"
+        android:title="Akun"
+        />
+
+</menu>

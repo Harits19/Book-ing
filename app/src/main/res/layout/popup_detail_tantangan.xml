@@ -50,13 +50,17 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:text="Killing Henningway"
+                    android:drawableLeft="@drawable/nama_buku"
+                    android:drawablePadding="12dp"
                     android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="26dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
+                    android:drawableLeft="@drawable/durasi"
+                    android:drawablePadding="4dp"
                     android:text="20:00 (Durasi : 15 Menit)"
                     android:textSize="16sp" />
                 <TextView
@@ -65,6 +69,8 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:text="30 Hari"
+                    android:drawableLeft="@drawable/date"
+                    android:drawablePadding="12dp"
                     android:textSize="16sp" />
 
 

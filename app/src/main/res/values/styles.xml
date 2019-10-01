@@ -5,13 +5,14 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:typeface">monospace</item>
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">#2BB1A7</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColor">#14080E</item>
         <item name="editTextBackground">@drawable/edittext_rounded</item>
-        <item name="android:typeface">monospace</item>
+
     </style>
 
 

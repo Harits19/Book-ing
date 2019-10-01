@@ -108,6 +108,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tambah \nSaldo"
+                android:layout_marginRight="8dp"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"

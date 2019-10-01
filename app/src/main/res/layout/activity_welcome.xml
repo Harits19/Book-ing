@@ -25,7 +25,6 @@
         android:gravity="center"
         android:text="Memudahkan kamu dalam menukar \ndan meminjam buku"
         android:textSize="16sp"
-        android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />

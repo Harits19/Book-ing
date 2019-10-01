@@ -27,7 +27,6 @@
         android:layout_marginRight="24dp"
         android:hint="Nama"
         android:textSize="16sp"
-        android:drawableLeft="@drawable/akun"
         android:drawablePadding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

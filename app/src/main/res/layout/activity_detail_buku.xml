@@ -126,17 +126,18 @@
         >
 
         <Button
+            style="@style/CustomButton2"
+            android:id="@+id/button_obrolan"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/colorAccent"
-            android:text="Chat"
+            android:text="Obrolan"
             android:textAllCaps="false"
-            android:textColor="#fff"
             android:textSize="16sp" />
 
         <Button
             style="@style/CustomButton1"
+            android:id="@+id/button_tukar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"

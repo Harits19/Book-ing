@@ -32,7 +32,7 @@
                 android:layout_weight="1"
                 android:text="Pinjam Buku"
                 android:textAllCaps="false"
-                android:textSize="12sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/button_tukar_buku"
@@ -43,7 +43,7 @@
                 android:layout_weight="1"
                 android:text="Tukar Buku"
                 android:textAllCaps="false"
-                android:textSize="12sp" />
+                android:textSize="16sp" />
 
 
         </LinearLayout>
@@ -109,7 +109,7 @@
                 android:layout_height="wrap_content"
                 android:text="Tambah \nSaldo"
                 android:textAllCaps="false"
-                android:textSize="12sp"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

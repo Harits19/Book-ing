@@ -42,7 +42,7 @@ public class PesanAdapter extends RecyclerView.Adapter<PesanAdapter.PesanViewHol
         holder.TextviewRingkasanPesan.setText(ListData.get(position).getRingkasanPesan());
         holder.TextviewWaktuPesan.setText(ListData.get(position).getWaktuPesan());
 
-        holder.TextviewRingkasanPesan.setOnClickListener(new View.OnClickListener() {
+        holder.ConstraintlayoutPesan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Parent.getContext().startActivity(new Intent(Parent.getContext(), ActivityDetailPesan.class));

@@ -46,7 +46,7 @@
         android:layout_width="match_parent"
         android:text="Scan Buku"
         android:textAllCaps="false"
-        android:textSize="24sp"
+        android:textSize="16sp"
         android:layout_height="64dp"/>
 
     <Button
@@ -58,7 +58,7 @@
         android:text="Menyerah :("
         android:layout_marginTop="8dp"
         android:textAllCaps="false"
-        android:textSize="24sp"
+        android:textSize="16sp"
         android:layout_height="64dp"/>
 
 

@@ -47,9 +47,9 @@ public class TantanganAdapter extends RecyclerView.Adapter<TantanganAdapter.Tant
 
         public TantanganViewHolder(View itemView) {
             super(itemView);
-            TextviewJudul = itemView.findViewById(R.id.textview_judul);
+            TextviewJudul = itemView.findViewById(R.id.textview_judul_buku_akun);
 
-            TextviewPoin = itemView.findViewById(R.id.textview_poin);
+            TextviewPoin = itemView.findViewById(R.id.textview_jaminan_buku);
 
         }
     }

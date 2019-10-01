@@ -66,7 +66,7 @@ public class ActivityTransaksiPenukaran extends AppCompatActivity {
 
 
         progressBar = findViewById(R.id.progressBar1);
-        recyclerView = findViewById(R.id.recyclerview_tantangan);
+        recyclerView = findViewById(R.id.recyclerview_koleksi_buku_akun);
 
 
         mQueue = Volley.newRequestQueue(this);

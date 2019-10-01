@@ -14,7 +14,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.book_ing.ActivityKatalog;
+import com.example.book_ing.Adapter.BeritaAdapter;
 import com.example.book_ing.Adapter.TantanganAdapter;
+import com.example.book_ing.OtherClass.Berita;
 import com.example.book_ing.OtherClass.Tantangan;
 import com.example.book_ing.R;
 
@@ -25,6 +27,7 @@ public class FragmentBeranda extends Fragment {
     private Button ButtonPinjam, ButtonTukar;
     private RecyclerView RecyclerviewTantangan, RecyclerviewBerita;
     private ArrayList<Tantangan> ListTantangan;
+    private ArrayList<Berita> ListBerita;
 
     @Nullable
     @Override
@@ -33,7 +36,7 @@ public class FragmentBeranda extends Fragment {
 
         ButtonPinjam = view.findViewById(R.id.button_pinjam_buku);
         ButtonTukar = view.findViewById(R.id.button_tukar_buku);
-        RecyclerviewTantangan = view.findViewById(R.id.recyclerview_tantangan);
+        RecyclerviewTantangan = view.findViewById(R.id.recyclerview_koleksi_buku_akun);
         RecyclerviewBerita = view.findViewById(R.id.recyclerview_berita);
 
         ButtonPinjam.setOnClickListener(new View.OnClickListener() {
@@ -59,17 +62,33 @@ public class FragmentBeranda extends Fragment {
         RecyclerviewTantangan.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         RecyclerviewTantangan.setAdapter(myAdapter);
 
+        addDataBerita();
+        RecyclerviewBerita = view.findViewById(R.id.recyclerview_berita);
+        BeritaAdapter beritaAdapter = new BeritaAdapter(ListBerita);
+        RecyclerView.LayoutManager layoutManagerBerita = new LinearLayoutManager(getActivity());
+        RecyclerviewBerita.setLayoutManager(layoutManagerBerita);
+        RecyclerviewBerita.setAdapter(beritaAdapter);
+
 
 
         return view;
     }
 
-    void addListTantangan() {
+    private void addListTantangan() {
         ListTantangan = new ArrayList<>();
         ListTantangan.add(new Tantangan("AA", "2999"));
         ListTantangan.add(new Tantangan("AA", "2999"));
         ListTantangan.add(new Tantangan("AA", "2999"));
         ListTantangan.add(new Tantangan("AA", "2999"));
 
+    }
+
+    private void addDataBerita() {
+        ListBerita = new ArrayList<>();
+        ListBerita.add(new Berita("AA", "AA"));
+        ListBerita.add(new Berita("BB", "AA"));
+        ListBerita.add(new Berita("CC", "CC"));
+        ListBerita.add(new Berita("DD", "DD"));
+//
     }
 }

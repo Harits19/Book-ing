@@ -4,15 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 import com.example.book_ing.Fragment.FragmentAkun;
 import com.example.book_ing.Fragment.FragmentBeranda;
-import com.example.book_ing.Fragment.FragmentChat;
+import com.example.book_ing.Fragment.FragmentPesan;
 import com.example.book_ing.Fragment.FragmentTransaksi;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -52,7 +49,7 @@ public class ActivityBottomNavigation extends AppCompatActivity implements Botto
                 fragment = new FragmentTransaksi();
                 break;
             case R.id.pesan_menu:
-                fragment = new FragmentChat();
+                fragment = new FragmentPesan();
                 break;
             case R.id.akun_menu:
                 fragment = new FragmentAkun();

@@ -6,11 +6,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.example.book_ing.Activity.ActivityTambahKoleksiBuku;
 import com.example.book_ing.Adapter.BukuAdapter;
 import com.example.book_ing.OtherClass.Buku;
 import com.example.book_ing.R;
@@ -20,6 +23,7 @@ import java.util.ArrayList;
 public class FragmentAkun extends Fragment {
 
         private ArrayList<Buku> ListBukuKoleksi;
+        private Button ButtonTambahKoleksi;
         private RecyclerView RecyclerviewKoleksiBuku;
 
 
@@ -29,6 +33,16 @@ public class FragmentAkun extends Fragment {
         View view = inflater.inflate(R.layout.fragment_akun, container, false);
 
         RecyclerviewKoleksiBuku = view.findViewById(R.id.recyclerview_koleksi_buku_akun);
+        ButtonTambahKoleksi = view.findViewById(R.id.button_tambah_koleksi);
+
+        ButtonTambahKoleksi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity() , ActivityTambahKoleksiBuku.class));
+
+            }
+        });
+
 
 
         addListBukuKoleksi();

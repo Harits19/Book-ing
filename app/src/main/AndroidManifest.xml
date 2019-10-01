@@ -12,9 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Welcome.ActivityDaftar" />
-        <activity android:name=".ActivityBottomNavigation" />
-        <activity android:name=".ActivityDetailPesan" />
+        <activity android:name=".Activity.ActivityBottomNavigation" />
+        <activity android:name=".Activity.ActivityDetailPesan" />
         <activity android:name=".Welcome.ActivityMasuk" />
+        <activity android:name=".Activity.ActivityTambahKoleksiBuku" />
         <activity android:name=".Welcome.ActivityWelcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +24,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ActivityTransaksiPenukaran">
+        <activity android:name=".Activity.ActivityTransaksiPenukaran">
 
         </activity>
     </application>

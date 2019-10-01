@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.book_ing.ActivityDetailPesan;
+import com.example.book_ing.Activity.ActivityDetailPesan;
 import com.example.book_ing.OtherClass.Pesan;
 import com.example.book_ing.R;
 

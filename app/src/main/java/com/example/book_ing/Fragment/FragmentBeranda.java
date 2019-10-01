@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.book_ing.ActivityKatalog;
+import com.example.book_ing.Activity.ActivityKatalog;
 import com.example.book_ing.Adapter.BeritaAdapter;
 import com.example.book_ing.Adapter.TantanganAdapter;
 import com.example.book_ing.OtherClass.Berita;
@@ -68,6 +68,8 @@ public class FragmentBeranda extends Fragment {
         RecyclerView.LayoutManager layoutManagerBerita = new LinearLayoutManager(getActivity());
         RecyclerviewBerita.setLayoutManager(layoutManagerBerita);
         RecyclerviewBerita.setAdapter(beritaAdapter);
+        RecyclerviewBerita.setNestedScrollingEnabled(false);
+
 
 
 

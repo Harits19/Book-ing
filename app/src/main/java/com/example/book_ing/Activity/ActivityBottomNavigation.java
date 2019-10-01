@@ -1,4 +1,4 @@
-package com.example.book_ing;
+package com.example.book_ing.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,7 @@ import com.example.book_ing.Fragment.FragmentAkun;
 import com.example.book_ing.Fragment.FragmentBeranda;
 import com.example.book_ing.Fragment.FragmentPesan;
 import com.example.book_ing.Fragment.FragmentTransaksi;
+import com.example.book_ing.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ActivityBottomNavigation extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{

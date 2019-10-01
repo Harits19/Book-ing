@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.book_ing.ActivityBottomNavigation;
+import com.example.book_ing.Activity.ActivityBottomNavigation;
 import com.example.book_ing.R;
 
 public class ActivityDaftar extends AppCompatActivity {

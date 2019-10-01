@@ -11,18 +11,32 @@
         android:layout_height="wrap_content">
 
 
+        <Button
+            android:id="@+id/button_tambah_koleksi"
+            style="@style/CustomButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="44dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Tambah Koleksi"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="8dp"
             android:paddingTop="8dp"
             android:text="Koleksi"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+            app:layout_constraintTop_toTopOf="@+id/button_tambah_koleksi" />
 
         <TextView
             android:id="@+id/textView10"

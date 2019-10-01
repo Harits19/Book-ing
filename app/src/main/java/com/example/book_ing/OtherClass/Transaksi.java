@@ -1,12 +1,13 @@
 package com.example.book_ing.OtherClass;
 
-public class Buku {
+public class Transaksi {
 
-    private String JudulBuku, JaminanBuku, Pengarang;
+    private String JudulBuku, WaktuPinjam, Pengarang;
 
-    public Buku(String judulBuku, String jaminanBuku) {
+    public Transaksi(String judulBuku, String waktuPinjam, String pengarang) {
         JudulBuku = judulBuku;
-        JaminanBuku = jaminanBuku;
+        WaktuPinjam = waktuPinjam;
+        Pengarang = pengarang;
     }
 
     public String getJudulBuku() {
@@ -25,12 +26,12 @@ public class Buku {
         Pengarang = pengarang;
     }
 
-    public String getJaminanBuku() {
-        return JaminanBuku;
+    public String getWaktuPinjam() {
+        return WaktuPinjam;
     }
 
 
-    public void setJaminanBuku(String JaminanBuku) {
+    public void setWaktuPinjam(String JaminanBuku) {
         JaminanBuku = JaminanBuku;
     }
 }

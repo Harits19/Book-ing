@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.book_ing.ActivityBottomNavigation;
+import com.example.book_ing.Activity.ActivityBottomNavigation;
 import com.example.book_ing.R;
 
 public class ActivityMasuk extends AppCompatActivity {

@@ -5,7 +5,7 @@
     <gradient
         android:angle="45"
         android:endColor="@color/colorPrimary"
-        android:startColor="@color/colorPrimaryDark" />
+        android:startColor="#2BB1A7" />
 
 <!--    <padding-->
 <!--        android:bottom="7dp"-->

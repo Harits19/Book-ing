@@ -1,126 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="250dp"
-        android:layout_height="350dp"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView20"
+    <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="Killing Henningway"
-        android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:text="Jaminan : Rp 30.000"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:text="Asroru Maula"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView21" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="8dp"
-        android:text="Lowokwaru"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView21" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin= "16dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
-        app:layout_constraintTop_toBottomOf="@+id/textView19">
+        android:layout_above="@id/linearLayout7"
+        android:layout_alignParentTop="true">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="Max Corner"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="Gramedia Pustaka"/>
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="250dp"
+                android:layout_height="350dp"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="ISBN 817525766-0"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="16dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/textView19">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:layout_marginTop="24dp"
-            android:text="Sinopsis"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Max Corner"
+                    android:textSize="16sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text=" Andi adalah seorang anak yang hidup di sebuah desa yang masih asri. Andi seorang anak berumur 17 tahun yang tidak memiliki harapan lagi untuk melanjutkan sekolahnya di tingkat SMA, karena biaya yang terbatas. Suatu pagi seperti hari biasa dimana ia membantu ayahnya bekerja di sawah, ia terdiam melihat sekelompok anak mengenakan seragam, sepatu dan membawa tas hendak berangkat ke sekolah. Andi hanya bisa berangan-angan kapan ia bisa ikut bersama temannya berangkat sekolah. Harapan Andi untuk sekolah seakan tidak akan pernah terwujud, karena faktor kesejahteraan ekonomi yang rendah dan harus membantu orang tuanya sebagai buruh tani."/>
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gramedia Pustaka"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ISBN 817525766-0"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Sinopsis"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Andi adalah seorang anak yang hidup di sebuah desa yang masih asri. Andi seorang anak berumur 17 tahun yang tidak memiliki harapan lagi untuk melanjutkan sekolahnya di tingkat SMA, karena biaya yang terbatas. Suatu pagi seperti hari biasa dimana ia membantu ayahnya bekerja di sawah, ia terdiam melihat sekelompok anak mengenakan seragam, sepatu dan membawa tas hendak berangkat ke sekolah. Andi hanya bisa berangan-angan kapan ia bisa ikut bersama temannya berangkat sekolah. Harapan Andi untuk sekolah seakan tidak akan pernah terwujud, karena faktor kesejahteraan ekonomi yang rendah dan harus membantu orang tuanya sebagai buruh tani."
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Asroru Maula"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:text="Lowokwaru"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="bottom"
+                android:lines="2"
+                android:text="Killing Henningway"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Jaminan : Rp 30.000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/linearLayout7"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="24dp">
+        >
 
         <Button
+            style="@style/CustomButton2"
+            android:id="@+id/button_obrolan"
             android:layout_width="0dp"
-            android:background="@color/colorAccent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="#fff"
-            android:text="Chat"
+            android:text="Obrolan"
             android:textAllCaps="false"
             android:textSize="16sp" />
 
         <Button
             style="@style/CustomButton1"
+            android:id="@+id/button_tukar"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_weight="2"
             android:text="Tukar"
@@ -128,4 +147,4 @@
             android:textSize="16sp" />
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

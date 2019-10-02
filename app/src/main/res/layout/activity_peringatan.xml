@@ -35,8 +35,7 @@
         android:layout_margin="24dp"
         android:text="Ayo Ambil dan Baca Bukumu Sekarang :)"
         android:gravity="center"
-        android:textSize="32sp"
-        android:textStyle="bold"
+        android:textSize="24sp"
         />
 
     <Button
@@ -47,19 +46,20 @@
         android:layout_width="match_parent"
         android:text="Scan Buku"
         android:textAllCaps="false"
-        android:textSize="24sp"
-        android:layout_height="64dp"/>
+        android:textSize="16sp"
+        android:layout_height="wrap_content"/>
 
     <Button
         style="@style/CustomButton2"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
+        android:layout_marginBottom="24dp"
         android:layout_width="match_parent"
         android:text="Menyerah :("
         android:layout_marginTop="8dp"
         android:textAllCaps="false"
-        android:textSize="24sp"
-        android:layout_height="64dp"/>
+        android:textSize="16sp"
+        android:layout_height="wrap_content"/>
 
 
 </LinearLayout>

@@ -5,25 +5,40 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".Application"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FragmentAkun"></activity>
+<!--        <activity android:name=".FragmentAkun"></activity>-->
         <activity android:name=".FragmentBeranda" />
-        <activity android:name=".ActivityDaftar" />
-        <activity android:name=".ActivityTransaksiPenukaran" />
-        <activity android:name=".ActivityMasuk">
-        </activity>
-
-        <activity android:name=".ActivityWelcome">
+<!--        <activity android:name=".ActivityDaftar" />-->
+<!--        <activity android:name=".ActivityTransaksiPenukaran" />-->
+<!--        <activity android:name=".ActivityMasuk">-->
+<!--        </activity>-->
+z
+<!--        <activity android:name=".ActivityWelcome">-->
+        <activity android:name=".Welcome.ActivityDaftar" />
+        <activity android:name=".Activity.ActivityBottomNavigation" />
+<!--        <activity android:name=".Activity.ActivityDetailPesan" />-->
+        <activity android:name=".Activity.ActivityKatalog" />
+        <activity android:name=".Activity.ActivityDetailBuku" />
+        <activity android:name=".Activity.ActivityTambahSaldo" />
+        <activity android:name=".Activity.ActivityTransaksiPenukaran2" />
+        <activity android:name=".Welcome.ActivityMasuk" />
+        <activity android:name=".Activity.ActivityTambahKoleksiBuku" />
+        <activity android:name=".Welcome.ActivityWelcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".Activity.ActivityTransaksiPenukaran">
+
         </activity>
     </application>
 

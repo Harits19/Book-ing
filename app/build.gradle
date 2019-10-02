@@ -43,6 +43,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:9.8.0'
     implementation 'com.google.firebase:firebase-auth:9.8.0'
     implementation 'com.google.android.gms:play-services-auth:9.8.0'
+    implementation 'uk.co.chrisjenx:calligraphy:2.2.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

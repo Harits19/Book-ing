@@ -31,7 +31,7 @@ public class ActivityDetailBuku extends AppCompatActivity {
         buttonTukar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ActivityDetailBuku.this, ActivityTransaksiPenukaran.class));
+                startActivity(new Intent(ActivityDetailBuku.this, ActivityTransaksiPenukaran2.class));
             }
         });
 

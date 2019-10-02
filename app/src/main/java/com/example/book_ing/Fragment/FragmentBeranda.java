@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.book_ing.Activity.ActivityKatalog;
+import com.example.book_ing.Activity.ActivityTambahSaldo;
 import com.example.book_ing.Adapter.BeritaAdapter;
 import com.example.book_ing.Adapter.TantanganAdapter;
 import com.example.book_ing.OtherClass.Berita;
@@ -24,7 +25,7 @@ import java.util.ArrayList;
 
 public class FragmentBeranda extends Fragment {
 
-    private Button ButtonPinjam, ButtonTukar;
+    private Button ButtonPinjam, ButtonTukar, ButtonTambahSaldo;
     private RecyclerView RecyclerviewTantangan, RecyclerviewBerita;
     private ArrayList<Tantangan> ListTantangan;
     private ArrayList<Berita> ListBerita;
@@ -35,6 +36,8 @@ public class FragmentBeranda extends Fragment {
         View view = inflater.inflate(R.layout.fragment_beranda, container, false);
 
         ButtonPinjam = view.findViewById(R.id.button_pinjam_buku);
+        ButtonPinjam = view.findViewById(R.id.button_pinjam_buku);
+        ButtonTambahSaldo = view.findViewById(R.id.button_tambah_saldo);
         ButtonTukar = view.findViewById(R.id.button_tukar_buku);
         RecyclerviewTantangan = view.findViewById(R.id.recyclerview_koleksi_buku_akun);
         RecyclerviewBerita = view.findViewById(R.id.recyclerview_berita);
@@ -43,6 +46,14 @@ public class FragmentBeranda extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity() , ActivityKatalog.class));
+
+            }
+        });
+
+        ButtonTambahSaldo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity() , ActivityTambahSaldo.class));
 
             }
         });

@@ -5,6 +5,7 @@
     <item
         android:id="@+id/beranda_menu"
         android:title="Beranda"
+        android:icon="@drawable/search"
         />
 
     <item

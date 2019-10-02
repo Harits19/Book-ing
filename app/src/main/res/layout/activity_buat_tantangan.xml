@@ -27,6 +27,8 @@
             android:layout_marginLeft="24dp"
             android:layout_marginRight="24dp"
             android:hint="Nama Tantangan"
+            android:drawableLeft="@drawable/tantangan"
+            android:drawablePadding="12dp"
             android:textSize="16sp" />
 
         <EditText
@@ -77,9 +79,9 @@
             android:layout_marginLeft="24dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="24dp"
-            android:drawablePadding="4dp"
             android:hint="Durasi"
-
+            android:drawableLeft="@drawable/durasi"
+            android:drawablePadding="12dp"
             android:textSize="16sp" />
 
 

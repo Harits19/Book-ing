@@ -51,6 +51,7 @@
                     android:layout_marginTop="8dp"
                     android:id="@+id/textview_jaminan_katalog"
                     android:text="Jaminan : Rp 30.000"
+                    android:textColor="@color/colorPrimaryDark"
                     android:textSize="16sp" />
 
                 <TextView
@@ -66,6 +67,8 @@
                     android:layout_marginTop="8dp"
                     android:gravity="end"
                     android:text="Abdullah Harits"
+                    android:drawableRight="@drawable/pemilik"
+                    android:drawablePadding="12dp"
                     android:id="@+id/textview_pemilik_katalog"
                     android:textSize="16sp" />
 
@@ -75,6 +78,8 @@
                     android:gravity="end"
                     android:id="@+id/textview_lokasi_katalog"
                     android:text="Lowokwaru"
+                    android:drawableRight="@drawable/location"
+                    android:drawablePadding="12dp"
                     android:textSize="16sp" />
 
             </LinearLayout>

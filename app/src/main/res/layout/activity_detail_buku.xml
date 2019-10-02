@@ -57,6 +57,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:text="Sinopsis"
+                    android:drawableLeft="@drawable/sinopsis"
+                    android:drawablePadding="12dp"
+                    android:textStyle="bold"
                     android:textSize="16sp" />
 
                 <TextView
@@ -75,6 +78,8 @@
                 android:layout_marginTop="8dp"
                 android:text="Asroru Maula"
                 android:textSize="20sp"
+                android:drawableLeft="@drawable/pemilik"
+                android:drawablePadding="12dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
@@ -85,6 +90,8 @@
                 android:layout_marginRight="16dp"
                 android:text="Lowokwaru"
                 android:textSize="20sp"
+                android:drawableLeft="@drawable/location"
+                android:drawablePadding="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
@@ -110,6 +117,7 @@
                 android:layout_marginRight="16dp"
                 android:text="Jaminan : Rp 30.000"
                 android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView20" />

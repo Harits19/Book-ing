@@ -16,7 +16,7 @@
         android:background="#fff"
         android:padding="8dp"
         android:gravity="center_vertical"
-        android:hint="Search..."
+        android:hint="Cari Judul Buku..."
         android:drawableLeft="@drawable/search"
         android:textSize="16sp"
         android:drawablePadding="8dp"

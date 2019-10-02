@@ -15,6 +15,7 @@
             android:text="Berhasil"
             android:gravity="end"
             android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="16sp" />
 
         <TextView
@@ -27,18 +28,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tantangan Baca Killing Henningway"
+            android:drawableLeft="@drawable/tantangan"
+            android:drawablePadding="12dp"
             android:textSize="16sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="20:00 (Durasi 15 Menit)"
+            android:drawableLeft="@drawable/durasi"
+            android:drawablePadding="12dp"
             android:textSize="16sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="30 Hari"
+            android:drawableLeft="@drawable/date"
+            android:drawablePadding="12dp"
             android:textSize="16sp" />
     </LinearLayout>
 

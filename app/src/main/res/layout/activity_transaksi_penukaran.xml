@@ -181,6 +181,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
                                 android:text="Muhammad Rizki A"
+                                android:textColor="@color/colorPrimaryDark"
                                 android:textSize="16sp" />
 
                             <TextView
@@ -195,6 +196,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
                                 android:text="Killing Henningway"
+                                android:textColor="@color/colorPrimaryDark"
                                 android:textSize="16sp" />
 
 
@@ -243,7 +245,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
-                                android:text="Muhammad Rizki A"
+                                android:text="Abdullah Harits"
+                                android:textColor="@color/colorPrimaryDark"
                                 android:textSize="16sp" />
 
                             <TextView
@@ -257,7 +260,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
-                                android:text="Killing Henningway"
+                                android:text="Belajar Java"
+                                android:textColor="@color/colorPrimaryDark"
                                 android:textSize="16sp" />
 
 

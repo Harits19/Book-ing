@@ -34,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="Killing Hweningway Killing Hweningway"
+                android:text="Tantangan Baca Killing Hweningway"
                 android:lines="2"
 
                 android:gravity="bottom"
@@ -47,6 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:text="2000 Point"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="16sp" />
 
         </LinearLayout>

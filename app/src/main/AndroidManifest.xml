@@ -12,9 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<!--        <activity android:name=".FragmentAkun"></activity>-->
+        <activity android:name=".FragmentBeranda" />
+<!--        <activity android:name=".ActivityDaftar" />-->
+<!--        <activity android:name=".ActivityTransaksiPenukaran" />-->
+<!--        <activity android:name=".ActivityMasuk">-->
+<!--        </activity>-->
+z
+<!--        <activity android:name=".ActivityWelcome">-->
         <activity android:name=".Welcome.ActivityDaftar" />
         <activity android:name=".Activity.ActivityBottomNavigation" />
-        <activity android:name=".Activity.ActivityDetailPesan" />
+<!--        <activity android:name=".Activity.ActivityDetailPesan" />-->
         <activity android:name=".Activity.ActivityKatalog" />
         <activity android:name=".Activity.ActivityDetailBuku" />
         <activity android:name=".Activity.ActivityTambahSaldo" />

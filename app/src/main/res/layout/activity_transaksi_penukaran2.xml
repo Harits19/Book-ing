@@ -16,7 +16,7 @@
 
     <ScrollView
         android:id="@+id/scrollView1"
-        android:layout_above="@+id/button"
+        android:layout_above="@+id/button_status_transaksi"
         android:layout_below="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -34,6 +34,89 @@
         android:orientation="vertical"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:id="@+id/textView222"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Alamat Saya"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+
+        <AutoCompleteTextView
+            android:id="@+id/autocompletetext_kota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginTop="8dp"
+            android:background="#FFF"
+            android:completionThreshold="1"
+            android:hint="Kota"
+            android:padding="4dp"
+            android:popupBackground="#fff"
+            android:textSize="16sp"
+            />
+
+        <AutoCompleteTextView
+            android:id="@+id/autocompletetext_kecamatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#FFF"
+            android:padding="4dp"
+            android:completionThreshold="1"
+            android:hint="Kecamatan"
+            android:popupBackground="#fff"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView222" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Alamat Dia"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginTop="8dp"
+            android:hint="Kota"
+            android:padding="4dp"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginTop="8dp"
+            android:padding="4dp"
+            android:hint="Kecamatan"
+            android:textSize="16sp"
+            />
+
+        <Button
+            android:id="@+id/button_masuk_resi"
+            style="@style/CustomButton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Masukkan Resi"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kecamatan_asal" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:background="#fff"
@@ -48,6 +131,7 @@
             android:id="@+id/imageView4"
             android:layout_width="150dp"
             android:layout_height="0dp"
+            android:src="@drawable/buku"
             android:padding="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -101,56 +185,32 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
-            android:layout_width="96dp"
-            android:layout_height="32dp"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="end"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/constraintLayout7"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
 
+            android:orientation="vertical"
+            android:layout_below="@+id/linearLayout1"
 
-            <Button
-                style="@style/CustomButton1"
-
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="right"
-                android:layout_weight="1"
-                android:text="-"
-
-                android:textSize="12sp" />
-
-
+            android:layout_height="wrap_content">
 
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#ECFCFF"
-                android:gravity="center"
-                android:inputType="number"
-                android:hint="0"
-                android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark"
-                android:textSize="16sp" />
+                android:layout_width="wrap_content"
 
-            <Button
-                style="@style/CustomButton1"
+                android:layout_height="wrap_content"
+                android:text="Status Pengiriman"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="left"
-                android:layout_weight="1"
-                android:text="+"
-
-
-                android:textSize="12sp" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/status_pengiriman2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
 
 
         </LinearLayout>
+
+
 
 
         <TextView
@@ -162,9 +222,8 @@
         android:textStyle="bold"
         android:textSize="16sp"
         android:text="Tukar Buku Dengan"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
+
+         />
 
     <Button
         style="@style/CustomButton1"
@@ -180,7 +239,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:id="@+id/constraintLayout_buku_dipilih"
         android:layout_marginTop="8dp"
         android:background="#fff">
 
@@ -189,6 +248,7 @@
             android:layout_width="150dp"
             android:layout_height="0dp"
             android:padding="8dp"
+            android:src="@drawable/buku"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -240,315 +300,110 @@
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
-        android:layout_width="96dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_gravity="end"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/constraintLayout7"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
 
 
-        <Button
-            style="@style/CustomButton1"
-
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="right"
-            android:layout_weight="1"
-            android:text="-"
-
-            android:textSize="12sp" />
-
-
-
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#ECFCFF"
-            android:gravity="center"
-            android:inputType="number"
-            android:hint="0"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimaryDark"
-            android:textColorHint="@color/colorPrimaryDark"
-            android:textSize="16sp" />
-
-        <Button
-            style="@style/CustomButton1"
-
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="left"
-            android:layout_weight="1"
-            android:text="+"
-
-
-            android:textSize="12sp" />
-
-
-    </LinearLayout>
-
-
-    <TextView
-        android:id="@+id/textView222"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Alamat Saya"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        />
-
-    <AutoCompleteTextView
-        android:id="@+id/kota"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-
-        android:layout_marginTop="8dp"
-        android:background="#FFF"
-        android:completionThreshold="1"
-        android:hint="Kota"
-        android:padding="4dp"
-        android:popupBackground="#fff"
-        android:textSize="16sp"
-        />
-
-    <AutoCompleteTextView
-        android:id="@+id/kecamatan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="#FFF"
-        android:padding="4dp"
-        android:completionThreshold="1"
-        android:hint="Kecamatan"
-        android:popupBackground="#fff"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView222" />
-
-        <TextView
+        <LinearLayout
+            android:id="@+id/linearLayout_status_pengiriman_buku_saya"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Alamat Dia"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            />
+            android:orientation="vertical"
+            android:layout_below="@+id/linearLayout1"
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content">
 
 
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="Status Pengiriman"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/status_pengiriman1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
             android:layout_marginTop="8dp"
-            android:hint="Kota"
-            android:padding="4dp"
-            android:textSize="16sp"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-
-            android:layout_marginTop="8dp"
-            android:padding="4dp"
-            android:hint="Kecamatan"
-            android:textSize="16sp"
-            />
-
-
-
-
-
-        <Button
-            android:id="@+id/button4"
-            style="@style/CustomButton1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Masukkan Resi"
-            android:textAllCaps="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/kecamatan_asal" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_below="@+id/linearLayout1"
-
-        android:layout_height="wrap_content">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout6"
-            android:layout_width="match_parent"
-            android:background="#fff"
-            android:layout_height="wrap_content"
-
-
+            android:layout_gravity="end"
+            android:orientation="horizontal"
             >
 
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="150dp"
-                android:layout_height="0dp"
-                android:padding="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
-                android:layout_width="0dp"
+            <Button
+                style="@style/CustomButton1"
+
+                android:layout_width="32dp"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp"
-                android:gravity="center"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView1"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_gravity="right"
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Nama Pemilik"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                android:text="-"
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="Muhammad Rizki A"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Judul Buku"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="Killing Henningway"
-                    android:textSize="16sp" />
+                android:textSize="12sp" />
 
 
-            </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
 
-            android:layout_height="wrap_content"
-            android:text="Status Pengiriman"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/status_pengiriman2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_marginTop="8dp"
-            android:background="#fff"
-
-         >
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="150dp"
-                android:layout_height="0dp"
-                android:padding="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <LinearLayout
-                android:layout_width="0dp"
+            <TextView
+                android:layout_width="32dp"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp"
+                android:background="#ECFCFF"
                 android:gravity="center"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView5"
-                app:layout_constraintTop_toTopOf="parent">
+                android:inputType="number"
+                android:hint="0"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textSize="16sp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Nama Pemilik"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+            <Button
+                style="@style/CustomButton1"
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="Muhammad Rizki A"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Judul Buku"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="Killing Henningway"
-                    android:textSize="16sp" />
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:text="+"
 
 
-            </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_marginTop="8dp"
+                android:textSize="12sp" />
 
-            android:layout_height="wrap_content"
-            android:text="Status Pengiriman"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/status_pengiriman"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Jumlah Hari"
+                android:textSize="16sp"/>
+
+
+        </LinearLayout>
+
+
+
+
+
 
 
     </LinearLayout>
 
+
+
+
+
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:layout_below="@id/linearLayout3"
         android:layout_height="wrap_content">
 
         <LinearLayout
@@ -578,19 +433,21 @@
 
 
 
+
+
     </LinearLayout>
 </RelativeLayout>
 
     </ScrollView>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_status_transaksi"
         style="@style/CustomButton1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:layout_alignParentBottom="true"
-        android:text="Masuk"
+        android:text="Buku Sudah Diterima"
         android:textAllCaps="false"
         android:textSize="16sp"/>
 

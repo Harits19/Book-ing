@@ -7,11 +7,6 @@
     app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
    >
 
-
-
-
-
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout3"
             android:layout_width="match_parent"

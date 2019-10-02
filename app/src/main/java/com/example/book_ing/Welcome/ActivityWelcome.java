@@ -164,58 +164,58 @@ public class ActivityWelcome extends AppCompatActivity {
 
                 GoogleSignInAccount googleSignInAccount = googleSignInResult.getSignInAccount();
 
-                FirebaseUserAuth(googleSignInAccount);
+//                FirebaseUserAuth(googleSignInAccount);
             }
 
         }
     }
 
-    public void FirebaseUserAuth(GoogleSignInAccount googleSignInAccount) {
-
-        AuthCredential authCredential = GoogleAuthProvider.getCredential(googleSignInAccount.getIdToken(), null);
-
-        Toast.makeText(ActivityWelcome.this,""+ authCredential.getProvider(),Toast.LENGTH_LONG).show();
-
-        firebaseAuth.signInWithCredential(authCredential)
-                .addOnCompleteListener(ActivityWelcome.this, new OnCompleteListener() {
-                    @Override
-                    public void onComplete(@NonNull Task AuthResultTask) {
-
-                        if (AuthResultTask.isSuccessful()){
-
-                            // Getting Current Login user details.
-                            FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-
-                            // Showing Log out button.
-                            SignOutButton.setVisibility(View.VISIBLE);
-
-                            // Hiding Login in button.
-                            signInButton.setVisibility(View.GONE);
-
-                            // Showing the TextView.
-                            LoginUserEmail.setVisibility(View.VISIBLE);
-                            LoginUserName.setVisibility(View.VISIBLE);
-
-//                            // Setting up name into TextView.
-//                            LoginUserName.setText("NAME =  "+ firebaseUser.getDisplayName().toString());
+//    public void FirebaseUserAuth(GoogleSignInAccount googleSignInAccount) {
 //
-//                            // Setting up Email into TextView.
-//                            LoginUserEmail.setText("Email =  "+ firebaseUser.getEmail().toString());
-
-//                            Toast.makeText(ActivityWelcome.this,firebaseUser.getDisplayName(),Toast.LENGTH_LONG).show();
-
-
-                            Intent i = new Intent(ActivityWelcome.this, FragmentBeranda.class);
-                            i.putExtra("displayName",firebaseUser.getDisplayName());
-                            i.putExtra("displayEmail",firebaseUser.getEmail());
-                            startActivity(i);
-
-                        }else {
-                            Toast.makeText(ActivityWelcome.this,"Something Went Wrong",Toast.LENGTH_LONG).show();
-                        }
-                    }
-                });
-    }
+//        AuthCredential authCredential = GoogleAuthProvider.getCredential(googleSignInAccount.getIdToken(), null);
+//
+//        Toast.makeText(ActivityWelcome.this,""+ authCredential.getProvider(),Toast.LENGTH_LONG).show();
+//
+//        firebaseAuth.signInWithCredential(authCredential)
+//                .addOnCompleteListener(ActivityWelcome.this, new OnCompleteListener() {
+//                    @Override
+//                    public void onComplete(@NonNull Task AuthResultTask) {
+//
+//                        if (AuthResultTask.isSuccessful()){
+//
+//                            // Getting Current Login user details.
+//                            FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+//
+//                            // Showing Log out button.
+//                            SignOutButton.setVisibility(View.VISIBLE);
+//
+//                            // Hiding Login in button.
+//                            signInButton.setVisibility(View.GONE);
+//
+//                            // Showing the TextView.
+//                            LoginUserEmail.setVisibility(View.VISIBLE);
+//                            LoginUserName.setVisibility(View.VISIBLE);
+//
+////                            // Setting up name into TextView.
+////                            LoginUserName.setText("NAME =  "+ firebaseUser.getDisplayName().toString());
+////
+////                            // Setting up Email into TextView.
+////                            LoginUserEmail.setText("Email =  "+ firebaseUser.getEmail().toString());
+//
+////                            Toast.makeText(ActivityWelcome.this,firebaseUser.getDisplayName(),Toast.LENGTH_LONG).show();
+//
+//
+//                            Intent i = new Intent(ActivityWelcome.this, FragmentBeranda.class);
+//                            i.putExtra("displayName",firebaseUser.getDisplayName());
+//                            i.putExtra("displayEmail",firebaseUser.getEmail());
+//                            startActivity(i);
+//
+//                        }else {
+//                            Toast.makeText(ActivityWelcome.this,"Something Went Wrong",Toast.LENGTH_LONG).show();
+//                        }
+//                    }
+//                });
+//    }
 
     public void UserSignOutFunction() {
 

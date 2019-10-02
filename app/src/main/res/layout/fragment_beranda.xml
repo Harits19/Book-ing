@@ -63,17 +63,30 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:textStyle="bold"
             android:id="@+id/textView6"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
             android:layout_marginTop="8dp"
+            android:paddingLeft="8dp"
             android:paddingTop="8dp"
             android:text="Tantangan"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout9" />
+
+        <TextView
+            android:id="@+id/textview_lihat_tantangan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:text="Lihat Semua"
+            android:layout_marginRight="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout9" />
 
         <TextView
@@ -134,11 +147,11 @@
                 android:layout_marginEnd="8dp"
                 android:text="Abdullah Harits"
                 android:textStyle="bold"
-                android:gravity="bottom"
+                android:gravity="center_vertical"
 
                 android:lines="2"
                 android:textSize="16sp"
-                app:layout_constraintEnd_toStartOf="@+id/button3"
+                app:layout_constraintEnd_toStartOf="@+id/button_tambah_saldo"
                 app:layout_constraintStart_toEndOf="@+id/imageview_pengirim_pesan"
                 app:layout_constraintTop_toTopOf="@+id/imageview_pengirim_pesan" />
 
@@ -146,6 +159,7 @@
                 android:id="@+id/imageview_pengirim_pesan"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
+                android:src="@drawable/people"
                 android:layout_alignParentLeft="true"
                 android:layout_marginStart="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"

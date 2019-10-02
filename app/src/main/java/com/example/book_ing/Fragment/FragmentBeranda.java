@@ -12,9 +12,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.book_ing.Activity.ActivityKatalog;
 import com.example.book_ing.Activity.ActivityTambahSaldo;
+import com.example.book_ing.Activity.ActivityTantangan;
 import com.example.book_ing.Adapter.BeritaAdapter;
 import com.example.book_ing.Adapter.TantanganAdapter;
 import com.example.book_ing.OtherClass.Berita;
@@ -27,6 +29,7 @@ public class FragmentBeranda extends Fragment {
 
     private Button ButtonPinjam, ButtonTukar, ButtonTambahSaldo;
     private RecyclerView RecyclerviewTantangan, RecyclerviewBerita;
+    private TextView textViewLihatSemuaTantangan;
     private ArrayList<Tantangan> ListTantangan;
     private ArrayList<Berita> ListBerita;
 
@@ -37,10 +40,18 @@ public class FragmentBeranda extends Fragment {
 
         ButtonPinjam = view.findViewById(R.id.button_pinjam_buku);
         ButtonPinjam = view.findViewById(R.id.button_pinjam_buku);
+        textViewLihatSemuaTantangan = view.findViewById(R.id.textview_lihat_tantangan);
         ButtonTambahSaldo = view.findViewById(R.id.button_tambah_saldo);
         ButtonTukar = view.findViewById(R.id.button_tukar_buku);
         RecyclerviewTantangan = view.findViewById(R.id.recyclerview_koleksi_buku_akun);
         RecyclerviewBerita = view.findViewById(R.id.recyclerview_berita);
+
+        textViewLihatSemuaTantangan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity() , ActivityTantangan.class));
+            }
+        });
 
         ButtonPinjam.setOnClickListener(new View.OnClickListener() {
             @Override

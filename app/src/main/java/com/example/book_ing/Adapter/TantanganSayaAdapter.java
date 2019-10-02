@@ -13,27 +13,27 @@ import com.example.book_ing.R;
 
 import java.util.ArrayList;
 
-public class TantanganAdapter extends RecyclerView.Adapter<TantanganAdapter.TantanganViewHolder> {
+public class TantanganSayaAdapter extends RecyclerView.Adapter<TantanganSayaAdapter.TantanganViewHolder> {
 
 
     private ArrayList<Tantangan> ListData;
 
-    public TantanganAdapter(ArrayList<Tantangan> ListData) {
+    public TantanganSayaAdapter(ArrayList<Tantangan> ListData) {
         this.ListData = ListData;
     }
 
     @Override
     public TantanganViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.recyclerview_tantangan, parent, false);
+        View view = layoutInflater.inflate(R.layout.recyclerview_tantangan_saya, parent, false);
         return new TantanganViewHolder(view);
 
     }
 
     @Override
     public void onBindViewHolder(TantanganViewHolder holder, int position) {
-        holder.TextviewJudul.setText(ListData.get(position).getJudulTantangan());
-        holder.TextviewPoin.setText(ListData.get(position).getPoin());
+//        holder.TextviewJudul.setText(ListData.get(position).getJudulTantangan());
+//        holder.TextviewPoin.setText(ListData.get(position).getPoin());
 
     }
 
@@ -47,8 +47,8 @@ public class TantanganAdapter extends RecyclerView.Adapter<TantanganAdapter.Tant
 
         public TantanganViewHolder(View itemView) {
             super(itemView);
-            TextviewJudul = itemView.findViewById(R.id.textview_judul_buku_akun);
-            TextviewPoin = itemView.findViewById(R.id.textview_jaminan_buku);
+//            TextviewJudul = itemView.findViewById(R.id.textview_judul_buku_akun);
+//            TextviewPoin = itemView.findViewById(R.id.textview_jaminan_buku);
 
         }
     }

@@ -14,6 +14,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Welcome.ActivityDaftar" />
         <activity android:name=".Activity.ActivityBottomNavigation" />
+        <activity android:name=".Activity.ActivityTantangan" />
         <activity android:name=".Activity.ActivityKatalog" />
         <activity android:name=".Activity.ActivityDetailBuku" />
         <activity android:name=".Activity.ActivityTambahSaldo" />

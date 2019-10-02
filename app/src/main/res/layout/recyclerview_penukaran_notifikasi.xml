@@ -31,7 +31,7 @@
 
 
         <TextView
-            android:id="@+id/textview_judul_buku_pinjam"
+            android:id="@+id/textview_judul_buku"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -42,7 +42,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textview_pengarang_buku_pinjam"
+            android:id="@+id/textview_pengarang_buku"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -50,7 +50,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/textview_status_buku_pinjam"
+            android:id="@+id/textview_Isbn_buku"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"

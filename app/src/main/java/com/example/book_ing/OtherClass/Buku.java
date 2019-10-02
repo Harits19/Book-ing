@@ -2,11 +2,25 @@ package com.example.book_ing.OtherClass;
 
 public class Buku {
 
-    private String JudulBuku, JaminanBuku, Pengarang, Pemilik, Lokasi, Terpinjam;
+    private String JudulBuku, JaminanBuku, Pengarang, Pemilik, Lokasi, Terpinjam, Isbn;
 
     public Buku(String judulBuku, String jaminanBuku) {
         JudulBuku = judulBuku;
         JaminanBuku = jaminanBuku;
+    }
+
+    public String getIsbn() {
+        return Isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        Isbn = isbn;
+    }
+
+    public Buku(String judulBuku, String jaminanBuku, String isbn) {
+        JudulBuku = judulBuku;
+        JaminanBuku = jaminanBuku;
+        Isbn = isbn;
     }
 
     public Buku(String judulBuku, String jaminanBuku, String pengarang, String pemilik, String lokasi, String terpinjam) {

@@ -42,14 +42,14 @@ public class FragmentBeranda extends Fragment {
         RecyclerviewTantangan = view.findViewById(R.id.recyclerview_koleksi_buku_akun);
         RecyclerviewBerita = view.findViewById(R.id.recyclerview_berita);
 
-        TextView textViewNama = (TextView) view.findViewById(R.id.textview_nama);
-        Bundle extras = getActivity().getIntent().getExtras();
-        if (extras != null) {
-            String displayName = extras.getString("displayName");
-            String displayEmail = extras.getString("displayEmail");
-            textViewNama.setText(displayName);
-            //The key argument here must match that used in the other activity
-        }
+//        TextView textViewNama = (TextView) view.findViewById(R.id.textview_nama);
+//        Bundle extras = getActivity().getIntent().getExtras();
+//        if (extras != null) {
+//            String displayName = extras.getString("displayName");
+//            String displayEmail = extras.getString("displayEmail");
+//            textViewNama.setText(displayName);
+//            //The key argument here must match that used in the other activity
+//        }
 
         ButtonPinjam.setOnClickListener(new View.OnClickListener() {
             @Override

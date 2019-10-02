@@ -16,7 +16,7 @@
         <activity android:name=".Activity.ActivityBottomNavigation" />
         <activity android:name=".Activity.ActivityTantangan" />
         <activity android:name=".Activity.ActivityKatalog" />
-        <activity android:name=".Activity.ActivityKatalogPenukaran" />
+        <activity android:name=".Activity.ActivityDetailPesan" />
         <activity android:name=".Activity.ActivityDetailBuku" />
         <activity android:name=".Activity.ActivityTambahSaldo" />
         <activity android:name=".Activity.ActivityTransaksiPenukaran2" />

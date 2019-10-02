@@ -63,12 +63,12 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/textview_waktu_buku_pinjam"
+            android:id="@+id/textview_status_buku_pinjam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="4 September 2019"
             android:textColor="@color/colorPrimaryDark"
+            android:text="Masih Dipinjam"
             android:textSize="16sp" />
 
         <Button

@@ -50,7 +50,7 @@ public class TukarNotifikasiAdapter extends RecyclerView.Adapter<TukarNotifikasi
             super(itemView);
             TextviewJudulBuku = itemView.findViewById(R.id.textview_judul_buku_pinjam);
             TextviewPengarangBuku = itemView.findViewById(R.id.textview_pengarang_buku_pinjam);
-            TextviewWaktuPinjam = itemView.findViewById(R.id.textview_waktu_buku_pinjam);
+            TextviewWaktuPinjam = itemView.findViewById(R.id.textview_status_buku_pinjam);
 
         }
     }

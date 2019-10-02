@@ -34,7 +34,7 @@ public class TransaksiAdapter extends RecyclerView.Adapter<TransaksiAdapter.Tran
     public void onBindViewHolder(TransaksiPinjamViewHolder holder, int position) {
         holder.TextviewJudulBuku.setText(ListData.get(position).getJudulBuku());
         holder.TextviewPengarangBuku.setText(ListData.get(position).getPengarang());
-        holder.TextviewWaktuPinjam.setText(ListData.get(position).getWaktuPinjam());
+        holder.TextviewStatusPinjam.setText(ListData.get(position).getWaktuPinjam());
 
     }
 
@@ -44,13 +44,13 @@ public class TransaksiAdapter extends RecyclerView.Adapter<TransaksiAdapter.Tran
     }
 
     public class TransaksiPinjamViewHolder extends RecyclerView.ViewHolder {
-        private TextView TextviewJudulBuku, TextviewPengarangBuku, TextviewWaktuPinjam;
+        private TextView TextviewJudulBuku, TextviewPengarangBuku, TextviewStatusPinjam;
 
         public TransaksiPinjamViewHolder(View itemView) {
             super(itemView);
             TextviewJudulBuku = itemView.findViewById(R.id.textview_judul_buku_pinjam);
             TextviewPengarangBuku = itemView.findViewById(R.id.textview_pengarang_buku_pinjam);
-            TextviewWaktuPinjam = itemView.findViewById(R.id.textview_waktu_buku_pinjam);
+            TextviewStatusPinjam = itemView.findViewById(R.id.textview_status_buku_pinjam);
 
         }
     }

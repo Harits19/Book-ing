@@ -31,16 +31,6 @@
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/status"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:gravity="end"
-            android:text="Sedang Dipinjam"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-
 
         <TextView
             android:id="@+id/textview_judul_buku_pinjam"
@@ -62,11 +52,11 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/textview_waktu_buku_pinjam"
+            android:id="@+id/textview_status_buku_pinjam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="4 September 2019"
+            android:text="Masih Dipinjam"
             android:textSize="16sp" />
 
         <Button

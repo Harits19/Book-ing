@@ -22,6 +22,7 @@ import com.example.book_ing.Adapter.TantanganAdapter;
 import com.example.book_ing.OtherClass.Berita;
 import com.example.book_ing.OtherClass.Tantangan;
 import com.example.book_ing.R;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
 import java.util.ArrayList;
 
@@ -33,10 +34,17 @@ public class FragmentBeranda extends Fragment {
     private ArrayList<Tantangan> ListTantangan;
     private ArrayList<Berita> ListBerita;
 
+    private BottomSheetBehavior mBottomSheetBehavior;
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_beranda, container, false);
+
+
+
+
 
         ButtonPinjam = view.findViewById(R.id.button_pinjam_buku);
         ButtonPinjam = view.findViewById(R.id.button_pinjam_buku);

@@ -80,10 +80,11 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
             }
         });
 
-
+        buttonMasukResi.setVisibility(View.GONE);
         buttonPilihBuku.setVisibility(View.VISIBLE);
         linearLayoutStatusBukuDia.setVisibility(View.GONE);
         linearLayoutStatusBukuSaya.setVisibility(View.GONE);
+        constraintLayoutBukuDipilih.setVisibility(View.GONE);
 
 
         final FragmentManager fm = getSupportFragmentManager();

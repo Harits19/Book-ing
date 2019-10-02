@@ -12,6 +12,7 @@
         >
 
         <LinearLayout
+            android:id="@+id/linearLayoutBuku"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#FFF"
@@ -29,7 +30,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textview_judul_buku_akun"
+                android:id="@+id/textview_judul_buku"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -44,9 +45,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:lines="1"
                 android:text="Jaminan : Rp 30.000"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="16sp" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 

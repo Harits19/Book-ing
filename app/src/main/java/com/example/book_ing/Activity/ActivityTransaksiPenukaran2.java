@@ -39,7 +39,7 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
 
         buttonPilihBuku = findViewById(R.id.button_pilih_buku);
         constraintLayoutBukuDipilih = findViewById(R.id.constraintLayout_buku_dipilih);
-        linearLayoutStatusBukuDia = findViewById(R.id.linearLayout1);
+        linearLayoutStatusBukuDia = findViewById(R.id.linearLayout_status_pengiriman_buku_dia);
         linearLayoutStatusBukuSaya = findViewById(R.id.linearLayout_status_pengiriman_buku_saya);
         buttonMasukResi = findViewById(R.id.button_masuk_resi);
         buttonStatusTransaksi = findViewById(R.id.button_status_transaksi);

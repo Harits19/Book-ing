@@ -29,7 +29,6 @@
 
 
     <LinearLayout
-        android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="wrap_content">
@@ -185,11 +184,10 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout1"
+            android:id="@+id/linearLayout_status_pengiriman_buku_dia"
             android:layout_width="match_parent"
 
             android:orientation="vertical"
-            android:layout_below="@+id/linearLayout1"
 
             android:layout_height="wrap_content">
 
@@ -306,7 +304,6 @@
             android:id="@+id/linearLayout_status_pengiriman_buku_saya"
             android:layout_width="match_parent"
             android:orientation="vertical"
-            android:layout_below="@+id/linearLayout1"
 
             android:layout_height="wrap_content">
 

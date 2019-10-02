@@ -1,9 +1,11 @@
-package com.example.book_ing;
+package com.example.book_ing.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.example.book_ing.R;
 
 public class ActivityDetailPesan extends AppCompatActivity {
 

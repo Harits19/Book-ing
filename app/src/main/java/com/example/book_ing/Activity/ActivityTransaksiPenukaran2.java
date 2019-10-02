@@ -38,7 +38,7 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
 
     Button buttonPilihBuku;
     Dialog myDialog;
-    RecyclerView recyclerViewPilihBukuPenukarn;
+    RecyclerView recyclerViewPilihBukuPenukaran;
     View sheetView;
 
 

@@ -15,10 +15,10 @@
         <activity android:name=".FragmentBeranda" />
         <activity android:name=".ActivityDaftar" />
         <activity android:name=".ActivityTransaksiPenukaran" />
-        <activity android:name=".ActivityWelcome">
+        <activity android:name=".ActivityMasuk">
         </activity>
 
-        <activity android:name=".ActivityMasuk">
+        <activity android:name=".ActivityWelcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

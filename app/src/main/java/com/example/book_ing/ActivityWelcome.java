@@ -178,11 +178,19 @@ public class ActivityWelcome extends AppCompatActivity {
                             LoginUserEmail.setVisibility(View.VISIBLE);
                             LoginUserName.setVisibility(View.VISIBLE);
 
-                            // Setting up name into TextView.
-                            LoginUserName.setText("NAME =  "+ firebaseUser.getDisplayName().toString());
+//                            // Setting up name into TextView.
+//                            LoginUserName.setText("NAME =  "+ firebaseUser.getDisplayName().toString());
+//
+//                            // Setting up Email into TextView.
+//                            LoginUserEmail.setText("Email =  "+ firebaseUser.getEmail().toString());
 
-                            // Setting up Email into TextView.
-                            LoginUserEmail.setText("Email =  "+ firebaseUser.getEmail().toString());
+//                            Toast.makeText(ActivityWelcome.this,firebaseUser.getDisplayName(),Toast.LENGTH_LONG).show();
+
+
+                            Intent i = new Intent(ActivityWelcome.this, FragmentBeranda.class);
+                            i.putExtra("displayName",firebaseUser.getDisplayName());
+                            i.putExtra("displayEmail",firebaseUser.getEmail());
+                            startActivity(i);
 
                         }else {
                             Toast.makeText(ActivityWelcome.this,"Something Went Wrong",Toast.LENGTH_LONG).show();

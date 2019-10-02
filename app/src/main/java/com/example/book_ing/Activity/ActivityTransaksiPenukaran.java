@@ -157,7 +157,7 @@ public class ActivityTransaksiPenukaran extends AppCompatActivity {
             }
         });
 
-        Button button = findViewById(R.id.button1);
+        Button button = findViewById(R.id.button_terima);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

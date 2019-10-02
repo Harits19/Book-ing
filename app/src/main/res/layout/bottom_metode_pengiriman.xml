@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
     android:orientation="vertical">
 
@@ -12,15 +12,14 @@
         android:id="@+id/constraintLayout3"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:layout_alignParentBottom="true"
         android:background="#fff">
 
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button_lanjutkan"
             style="@style/CustomButton1"
             android:layout_width="150dp"
-            android:layout_height="64dp"
+            android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:text="Lanjutkan"
             android:textAllCaps="false"
@@ -33,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kurir"
-            android:textSize="24sp"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/checkBox2"
             app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
 
@@ -43,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Cash On Delivery (COD)"
-            android:textSize="24sp"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/textView15"
             app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
@@ -54,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:text="Metode Pengiriman"
-            android:textSize="32sp"
+            android:textSize="24sp"
             app:layout_constraintTop_toTopOf="parent" />
 
 

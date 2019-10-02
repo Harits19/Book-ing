@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.book_ing.Activity.ActivityKatalog;
+
 import com.example.book_ing.Activity.ActivityTambahSaldo;
 import com.example.book_ing.Activity.ActivityTantangan;
 import com.example.book_ing.Adapter.BeritaAdapter;
@@ -57,6 +58,7 @@ public class FragmentBeranda extends Fragment {
         textViewLihatSemuaTantangan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(getActivity() , ActivityTantangan.class));
             }
         });
@@ -64,7 +66,9 @@ public class FragmentBeranda extends Fragment {
         ButtonPinjam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity() , ActivityKatalog.class));
+                Intent intent =new Intent(getActivity() , ActivityKatalog.class);
+                intent.putExtra("params", "tukar");
+                startActivity(intent);
 
             }
         });
@@ -80,8 +84,9 @@ public class FragmentBeranda extends Fragment {
         ButtonTukar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity() , ActivityKatalog.class));
-
+                Intent intent =new Intent(getActivity() , ActivityKatalog.class);
+                intent.putExtra("params", "tukar");
+                startActivity(intent);
             }
         });
 

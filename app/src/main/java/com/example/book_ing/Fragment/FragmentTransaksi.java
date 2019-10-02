@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.book_ing.Adapter.TabLayoutTransaksiAdapter;
+import com.example.book_ing.Adapter.TabLayoutAdapter;
 import com.example.book_ing.R;
 import com.google.android.material.tabs.TabLayout;
 
@@ -30,7 +30,7 @@ public class FragmentTransaksi extends Fragment {
         ViewPagerTransaksi= view.findViewById(R.id.viewpager_transaksi);
 
 
-        TabLayoutTransaksiAdapter adapter = new TabLayoutTransaksiAdapter(getActivity(), getChildFragmentManager(), TabLayoutTransaksi.getTabCount());
+        TabLayoutAdapter adapter = new TabLayoutAdapter(getActivity(), getChildFragmentManager(), TabLayoutTransaksi.getTabCount(), "transaksi");
         ViewPagerTransaksi.setAdapter(adapter);
         ViewPagerTransaksi.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(TabLayoutTransaksi));
 

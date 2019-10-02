@@ -6,7 +6,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.book_ing.Adapter.TabLayoutTantanganAdapter;
+import com.example.book_ing.Adapter.TabLayoutAdapter;
 import com.example.book_ing.R;
 import com.google.android.material.tabs.TabLayout;
 
@@ -26,7 +26,7 @@ public class ActivityTantangan extends AppCompatActivity {
         ViewPagerTantangan= findViewById(R.id.viewpager_transaksi);
 
 
-        TabLayoutTantanganAdapter adapter = new TabLayoutTantanganAdapter(this, getSupportFragmentManager(), TabLayoutTantangan.getTabCount());
+        TabLayoutAdapter adapter = new TabLayoutAdapter(this, getSupportFragmentManager(), TabLayoutTantangan.getTabCount(), "tantangan");
         ViewPagerTantangan.setAdapter(adapter);
         ViewPagerTantangan.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(TabLayoutTantangan));
 

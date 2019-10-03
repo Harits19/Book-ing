@@ -2,6 +2,7 @@ package com.example.book_ing.Activity;
 
 import android.app.ActionBar;
 import android.app.Dialog;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
@@ -80,7 +81,7 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
             }
         });
 
-        buttonMasukResi.setVisibility(View.GONE);
+//        buttonMasukResi.setVisibility(View.GONE);
         buttonPilihBuku.setVisibility(View.VISIBLE);
         linearLayoutStatusBukuDia.setVisibility(View.GONE);
         linearLayoutStatusBukuSaya.setVisibility(View.GONE);
@@ -90,8 +91,6 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
         final FragmentManager fm = getSupportFragmentManager();
         final DialogFragmentPilihBuku dialogFragmentPilihBuku = new DialogFragmentPilihBuku(ListBuku);
 
-
-        sheetView = this.getLayoutInflater().inflate(R.layout.popup_pilih_kurir, null);
 
         buttonPilihBuku.setOnClickListener(new View.OnClickListener() {
             @Override

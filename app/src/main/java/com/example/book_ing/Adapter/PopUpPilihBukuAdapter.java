@@ -2,6 +2,7 @@ package com.example.book_ing.Adapter;
 
 
 import android.content.Intent;
+import android.graphics.Rect;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,8 +35,9 @@ public class PopUpPilihBukuAdapter extends RecyclerView.Adapter<PopUpPilihBukuAd
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         Parent = parent;
         View view = layoutInflater.inflate(R.layout.recyclerview_popup_buku_transaksi_penukaran, parent, false);
-
-
+        Rect displayRectangle = new Rect();
+        view.setMinimumWidth((int)(displayRectangle.width() * 1f));
+        view.setMinimumHeight((int)(displayRectangle.height() * 1f));
         return new BukuViewHolder(view);
 
     }

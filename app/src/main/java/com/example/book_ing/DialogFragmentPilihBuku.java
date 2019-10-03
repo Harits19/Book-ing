@@ -1,5 +1,6 @@
 package com.example.book_ing;
 
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;

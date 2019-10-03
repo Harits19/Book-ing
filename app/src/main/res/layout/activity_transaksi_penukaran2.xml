@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout android:layout_width="match_parent"
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background2"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -24,8 +24,7 @@
         <RelativeLayout
     android:layout_width="match_parent"
 
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
+
     android:layout_height="match_parent">
 
 
@@ -34,51 +33,20 @@
         android:orientation="vertical"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/textView222"
+
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Alamat Peminjam"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            />
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#fff"
+            android:layout_height="wrap_content">
 
-        <AutoCompleteTextView
-            android:id="@+id/autocompletetext_kota"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-
-            android:layout_marginTop="8dp"
-            android:background="#FFF"
-            android:completionThreshold="1"
-            android:hint="Kota"
-            android:padding="4dp"
-            android:popupBackground="#fff"
-            android:textSize="16sp"
-            />
-
-        <AutoCompleteTextView
-            android:id="@+id/autocompletetext_kecamatan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="#FFF"
-            android:padding="4dp"
-            android:completionThreshold="1"
-            android:hint="Kecamatan"
-            android:popupBackground="#fff"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView222" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Alamat Pemilik"
+            android:text="Alamat Dia"
             android:textSize="16sp"
             android:textStyle="bold"
             />
@@ -104,10 +72,71 @@
             android:hint="Kecamatan"
             android:textSize="16sp"
             />
+
+            <TextView
+                android:id="@+id/textView222"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Alamat Saya"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <AutoCompleteTextView
+                android:id="@+id/autocompletetext_kota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_rounded"
+                android:completionThreshold="1"
+                android:hint="Kota"
+                android:padding="4dp"
+                android:popupBackground="#fff"
+                android:textSize="16sp"
+                />
+
+            <AutoCompleteTextView
+                android:id="@+id/autocompletetext_kecamatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_rounded"                android:padding="4dp"
+                android:completionThreshold="1"
+                android:hint="Kecamatan"
+                android:popupBackground="#fff"
+                android:textSize="16sp"
+                 />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Resi Pengiriman"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#FFF"
+                android:padding="4dp"
+                android:completionThreshold="1"
+                android:hint="Masukkan Resi"
+                android:popupBackground="#fff"
+                android:textSize="16sp"
+                />
+
+    </LinearLayout>
 
         <Button
             android:id="@+id/button_masuk_resi"
             style="@style/CustomButton1"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -120,6 +149,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:background="#fff"
+        android:padding="16dp"
         android:layout_height="wrap_content"
 
         android:layout_marginTop="16dp"
@@ -130,10 +160,9 @@
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="150dp"
-            android:layout_height="0dp"
-            android:src="@drawable/buku"
+            android:layout_height="150dp"
             android:padding="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/buku"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -182,14 +211,69 @@
 
 
         </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_gravity="end"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+
+            <Button
+                style="@style/CustomButton1"
+
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+
+                android:text="-"
+
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:background="#ECFCFF"
+                android:gravity="center"
+                android:hint="0"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+            <Button
+                style="@style/CustomButton1"
+
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:text="+"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Jumlah Hari"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:background="#fff"
+            android:padding="16dp"
             android:id="@+id/linearLayout_status_pengiriman_buku_dia"
             android:layout_width="match_parent"
-
             android:orientation="vertical"
-
             android:layout_height="wrap_content">
 
 
@@ -202,7 +286,7 @@
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/status_pengiriman2"
+                android:id="@+id/recyclerview_status_pengiriman_dia"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 
@@ -210,25 +294,24 @@
         </LinearLayout>
 
 
-
-
         <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:layout_marginTop="8dp"
-
-        android:textStyle="bold"
-        android:textSize="16sp"
-        android:text="Tukar Buku Dengan"
-
-         />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tukar Buku Dengan"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textStyle="bold"
+            />
 
     <Button
         style="@style/CustomButton1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Pilih Buku"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:id="@+id/button_pilih_buku"
         android:layout_marginTop="8dp"
 
@@ -238,6 +321,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="16dp"
         android:id="@+id/constraintLayout_buku_dipilih"
         android:layout_marginTop="8dp"
         android:background="#fff">
@@ -245,7 +329,7 @@
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="150dp"
-            android:layout_height="0dp"
+            android:layout_height="150dp"
             android:padding="8dp"
             android:src="@drawable/buku"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -305,7 +389,8 @@
             android:id="@+id/linearLayout_status_pengiriman_buku_saya"
             android:layout_width="match_parent"
             android:orientation="vertical"
-
+            android:background="#fff"
+            android:padding="16dp"
             android:layout_height="wrap_content">
 
 
@@ -318,7 +403,7 @@
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/status_pengiriman1"
+                android:id="@+id/recyclerview_status_pengiriman_saya"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 
@@ -329,60 +414,6 @@
 
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="end"
-            android:orientation="horizontal"
-            >
-
-
-            <Button
-                style="@style/CustomButton1"
-
-                android:layout_width="32dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="right"
-
-                android:text="-"
-
-                android:textSize="12sp" />
-
-
-
-
-            <TextView
-                android:layout_width="32dp"
-                android:layout_height="match_parent"
-                android:background="#ECFCFF"
-                android:gravity="center"
-                android:inputType="number"
-                android:hint="0"
-                android:textAlignment="center"
-                android:textColor="@color/colorPrimaryDark"
-                android:textColorHint="@color/colorPrimaryDark"
-                android:textSize="16sp" />
-
-            <Button
-                style="@style/CustomButton1"
-
-                android:layout_width="32dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="left"
-                android:text="+"
-
-
-                android:textSize="12sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" Jumlah Hari"
-                android:textSize="16sp"/>
-
-
-        </LinearLayout>
 
 
 
@@ -445,7 +476,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:layout_alignParentBottom="true"
-        android:text="Buku Sudah Diterima"
+        android:text="Kirim Buku"
         android:textAllCaps="false"
         android:textSize="16sp"/>
 

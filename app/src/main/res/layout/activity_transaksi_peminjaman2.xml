@@ -172,7 +172,7 @@
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/status_pengiriman2"
+                android:id="@+id/recyclerview_status_pengiriman_dia"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 

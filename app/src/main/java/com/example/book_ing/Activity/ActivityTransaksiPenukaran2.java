@@ -2,6 +2,7 @@ package com.example.book_ing.Activity;
 
 import android.app.ActionBar;
 import android.app.Dialog;
+import android.graphics.Color;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.View;
@@ -12,9 +13,14 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.book_ing.Adapter.KatalogAdapter;
+import com.example.book_ing.Adapter.StatusPengirimanAdapter;
 import com.example.book_ing.DialogFragmentPilihBuku;
 import com.example.book_ing.OtherClass.Buku;
+import com.example.book_ing.OtherClass.StatusPengiriman;
 import com.example.book_ing.R;
 
 import java.util.ArrayList;
@@ -24,12 +30,15 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
     public static Button buttonPilihBuku;
     public static ConstraintLayout constraintLayoutBukuDipilih;
     public Button buttonMasukResi, buttonStatusTransaksi;
+    private RecyclerView statusPengirimanDia, statusPengirimanSaya;
     View sheetView;
     private Dialog dialogResi;
     int count = 0;
     AutoCompleteTextView autoCompleteTextViewKota, autoCompleteTextViewKecamatan;
     private ArrayList<Buku> ListBuku;
+    private ArrayList<StatusPengiriman> ListStatusPengiriman;
     private LinearLayout linearLayoutStatusBukuDia, linearLayoutStatusBukuSaya;
+
 
 
     @Override
@@ -37,6 +46,7 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaksi_penukaran2);
         addDataBuku();
+        addStatusPengiriman();
 
         buttonPilihBuku = findViewById(R.id.button_pilih_buku);
         constraintLayoutBukuDipilih = findViewById(R.id.constraintLayout_buku_dipilih);
@@ -45,32 +55,16 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
         buttonMasukResi = findViewById(R.id.button_masuk_resi);
         buttonStatusTransaksi = findViewById(R.id.button_status_transaksi);
 
-
-        buttonStatusTransaksi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                count++;
-                if(count == 1){
-                    buttonStatusTransaksi.setText("Buku Ingin Dikembalikan");
-                }
-            }
-        });
-
-
+        statusPengirimanDia = findViewById(R.id.recyclerview_status_pengiriman_dia);
+        statusPengirimanSaya = findViewById(R.id.recyclerview_status_pengiriman_saya);
         autoCompleteTextViewKota = findViewById(R.id.autocompletetext_kota);
         autoCompleteTextViewKecamatan = findViewById(R.id.autocompletetext_kecamatan);
-
-//        if (autoCompleteTextViewKecamatan.getText().toString() != null) {
-//            buttonMasukResi.setVisibility(View.VISIBLE);
-//        } else if (autoCompleteTextViewKecamatan.getText().toString() == null) {
-//            buttonMasukResi.setVisibility(View.GONE);
-//        } else {
-//
-//        }
 
         dialogResi =  new Dialog(this);
 //        View
         sheetView = this.getLayoutInflater().inflate(R.layout.popup_masukkan_nomer_resi, null);
+
+
 
         buttonMasukResi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,8 +75,20 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
             }
         });
 
-//        buttonMasukResi.setVisibility(View.GONE);
+        buttonStatusTransaksi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                linearLayoutStatusBukuDia.setVisibility(View.VISIBLE);
+                linearLayoutStatusBukuSaya.setVisibility(View.VISIBLE);
+                buttonStatusTransaksi.setText("Dalam Perjalanan");
+                buttonStatusTransaksi.setEnabled(false);
+                buttonStatusTransaksi.setBackgroundColor(Color.parseColor("#f0f0f0"));
+                buttonStatusTransaksi.setTextColor(Color.parseColor("#000000"));
+            }
+        });
+
         buttonPilihBuku.setVisibility(View.VISIBLE);
+        buttonMasukResi.setVisibility(View.GONE);
         linearLayoutStatusBukuDia.setVisibility(View.GONE);
         linearLayoutStatusBukuSaya.setVisibility(View.GONE);
         constraintLayoutBukuDipilih.setVisibility(View.GONE);
@@ -102,6 +108,15 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
         });
 
 
+        StatusPengirimanAdapter statusPengirimanAdapter = new StatusPengirimanAdapter(ListStatusPengiriman);
+        RecyclerView.LayoutManager layoutManagerStatusPengirimanSaya = new LinearLayoutManager(this);
+        statusPengirimanSaya.setLayoutManager(layoutManagerStatusPengirimanSaya);
+        statusPengirimanSaya.setAdapter(statusPengirimanAdapter);
+        RecyclerView.LayoutManager layoutManagerStatusPengirimanDia = new LinearLayoutManager(this);
+        statusPengirimanDia.setLayoutManager(layoutManagerStatusPengirimanDia);
+        statusPengirimanDia.setAdapter(statusPengirimanAdapter);
+
+
     }
 
     private void addDataBuku() {
@@ -116,6 +131,14 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
         ListBuku.add(new Buku("Killing HeningwayF", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
         ListBuku.add(new Buku("Killing HeningwayG", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
         ListBuku.add(new Buku("Killing HeningwayE", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
+
+    }
+
+    private void addStatusPengiriman() {
+
+        ListStatusPengiriman = new ArrayList<>();
+        ListStatusPengiriman.add(new StatusPengiriman());
+        ListStatusPengiriman.add(new StatusPengiriman());
 
     }
 

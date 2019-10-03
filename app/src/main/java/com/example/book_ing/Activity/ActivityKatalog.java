@@ -13,6 +13,7 @@ import com.example.book_ing.Adapter.BukuAdapter;
 import com.example.book_ing.Adapter.KatalogAdapter;
 import com.example.book_ing.OtherClass.Buku;
 import com.example.book_ing.R;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
@@ -22,6 +23,7 @@ public class ActivityKatalog extends AppCompatActivity {
 
     private RecyclerView RecyclerViewKatalog;
     private ArrayList<Buku> ListKatalogBuku;
+    private TabLayout tabLayoutKategori;
 
         @Override
     protected void attachBaseContext(Context newBase) {
@@ -40,6 +42,16 @@ public class ActivityKatalog extends AppCompatActivity {
 //        RecyclerView.LayoutManager layoutManagerBerita = new LinearLayoutManager(this);
         RecyclerViewKatalog.setLayoutManager(new GridLayoutManager(this, 2));
         RecyclerViewKatalog.setAdapter(katalogAdapter);
+
+        //Konfigurasi TabLayout
+        tabLayoutKategori = findViewById(R.id.tabLayout_kategori);
+        tabLayoutKategori.setTabGravity(TabLayout.GRAVITY_CENTER);
+        tabLayoutKategori.addTab(tabLayoutKategori.newTab().setText("Semua"));
+        tabLayoutKategori.addTab(tabLayoutKategori.newTab().setText("Biografi"));
+        tabLayoutKategori.addTab(tabLayoutKategori.newTab().setText("Ilmiah"));
+        tabLayoutKategori.addTab(tabLayoutKategori.newTab().setText("Novel"));
+        tabLayoutKategori.addTab(tabLayoutKategori.newTab().setText("Tafsir"));
+
 
 
     }

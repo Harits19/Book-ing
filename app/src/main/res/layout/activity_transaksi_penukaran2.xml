@@ -2,6 +2,7 @@
 
 <RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background2"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -38,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Alamat Saya"
+            android:text="Alamat Peminjam"
             android:textSize="16sp"
             android:textStyle="bold"
             />
@@ -77,7 +78,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Alamat Dia"
+            android:text="Alamat Pemilik"
             android:textSize="16sp"
             android:textStyle="bold"
             />

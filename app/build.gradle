@@ -44,6 +44,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:9.8.0'
     implementation 'com.google.android.gms:play-services-auth:9.8.0'
     implementation 'uk.co.chrisjenx:calligraphy:2.2.0'
+    api 'com.clarifai.clarifai-api2:core:2.3.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 }
 
 apply plugin: 'com.google.gms.google-services'

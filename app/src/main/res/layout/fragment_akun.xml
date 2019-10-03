@@ -12,32 +12,32 @@
         android:layout_height="wrap_content">
 
 
-        <Button
+        <TextView
             android:id="@+id/button_tambah_koleksi"
-            style="@style/CustomButton2"
             android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:layout_marginTop="44dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:layout_marginRight="8dp"
             android:text="Tambah Koleksi"
             android:textAllCaps="false"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerview_koleksi_buku_akun"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:paddingLeft="8dp"
             android:paddingTop="8dp"
             android:text="Koleksi"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/button_tambah_koleksi" />
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
         <TextView
             android:id="@+id/textView10"
@@ -55,9 +55,10 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
+            android:background="@drawable/edittext_rounded"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginTop="40dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">

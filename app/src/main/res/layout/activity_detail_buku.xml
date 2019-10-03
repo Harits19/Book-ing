@@ -33,8 +33,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_margin="16dp"
+                android:layout_marginTop="8dp"
+                android:background="#fff"
                 android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@+id/textView19">
+                app:layout_constraintTop_toBottomOf="@+id/textView19"
+                tools:layout_editor_absoluteX="16dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -45,12 +48,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="Gramedia Pustaka"
                     android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="ISBN 817525766-0"
                     android:textSize="16sp" />
 
@@ -58,15 +63,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
-                    android:text="Sinopsis"
                     android:drawableLeft="@drawable/sinopsis"
                     android:drawablePadding="12dp"
-                    android:textStyle="bold"
-                    android:textSize="16sp" />
+                    android:text="Sinopsis"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
                     android:text=" Andi adalah seorang anak yang hidup di sebuah desa yang masih asri. Andi seorang anak berumur 17 tahun yang tidak memiliki harapan lagi untuk melanjutkan sekolahnya di tingkat SMA, karena biaya yang terbatas. Suatu pagi seperti hari biasa dimana ia membantu ayahnya bekerja di sawah, ia terdiam melihat sekelompok anak mengenakan seragam, sepatu dan membawa tas hendak berangkat ke sekolah. Andi hanya bisa berangan-angan kapan ia bisa ikut bersama temannya berangkat sekolah. Harapan Andi untuk sekolah seakan tidak akan pernah terwujud, karena faktor kesejahteraan ekonomi yang rendah dan harus membantu orang tuanya sebagai buruh tani."
                     android:textSize="16sp" />
             </LinearLayout>
@@ -113,14 +120,15 @@
 
             <TextView
                 android:id="@+id/textView21"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
+                android:padding="6dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimaryDark"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
                 android:text="Jaminan : Rp 30.000"
+                android:textColor="#fff"
                 android:textSize="20sp"
-                android:textColor="@color/colorPrimaryDark"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView20" />
         </androidx.constraintlayout.widget.ConstraintLayout>

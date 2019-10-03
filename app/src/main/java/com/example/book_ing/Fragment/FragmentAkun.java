@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.book_ing.Activity.ActivityTambahKoleksiBuku;
 import com.example.book_ing.Adapter.BukuAdapter;
@@ -23,7 +24,7 @@ import java.util.ArrayList;
 public class FragmentAkun extends Fragment {
 
         private ArrayList<Buku> ListBukuKoleksi;
-        private Button ButtonTambahKoleksi;
+        private TextView ButtonTambahKoleksi;
         private RecyclerView RecyclerviewKoleksiBuku;
 
 

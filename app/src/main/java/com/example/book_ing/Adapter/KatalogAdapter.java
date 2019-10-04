@@ -10,23 +10,24 @@ import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.book_ing.Activity.ActivityDetailBuku;
+import com.example.book_ing.Activity.ActivityDetailBukuPeminjaman;
+import com.example.book_ing.Activity.ActivityDetailBukuPenukaran;
 import com.example.book_ing.OtherClass.Buku;
 import com.example.book_ing.R;
 
-import java.text.ParseException;
 import java.util.ArrayList;
 
 public class KatalogAdapter extends RecyclerView.Adapter<KatalogAdapter.KatalogViewHolder> {
 
 
-    private ArrayList<Buku> ListData;
-
-    public KatalogAdapter(ArrayList<Buku> ListData) {
-        this.ListData = ListData;
-    }
-
     ViewGroup Parent;
+    private ArrayList<Buku> ListData;
+    private String Params;
+
+    public KatalogAdapter(ArrayList<Buku> ListData, String params) {
+        this.ListData = ListData;
+        Params = params;
+    }
 
     @Override
     public KatalogViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -47,13 +48,14 @@ public class KatalogAdapter extends RecyclerView.Adapter<KatalogAdapter.KatalogV
         holder.constraintLayoutKatalog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Parent.getContext().startActivity(new Intent(Parent.getContext(), ActivityDetailBuku.class));
+                if (Params.equals("penukaran"))
+                    Parent.getContext().startActivity(new Intent(Parent.getContext(), ActivityDetailBukuPenukaran.class));
+                else if (Params.equals("peminjaman"))
+                    Parent.getContext().startActivity(new Intent(Parent.getContext(), ActivityDetailBukuPeminjaman.class));
+
 
             }
         });
-
-
-
 
 
     }
@@ -64,8 +66,8 @@ public class KatalogAdapter extends RecyclerView.Adapter<KatalogAdapter.KatalogV
     }
 
     public class KatalogViewHolder extends RecyclerView.ViewHolder {
-        private TextView TextviewJudulKatalog , TextviewLokasiKatalog , TextviewJaminanKatalog, TextviewTerpinjamKatalog , TextviewPemilikKatalog;
         ConstraintLayout constraintLayoutKatalog;
+        private TextView TextviewJudulKatalog, TextviewLokasiKatalog, TextviewJaminanKatalog, TextviewTerpinjamKatalog, TextviewPemilikKatalog;
 
         public KatalogViewHolder(View itemView) {
             super(itemView);
@@ -76,7 +78,6 @@ public class KatalogAdapter extends RecyclerView.Adapter<KatalogAdapter.KatalogV
             TextviewPemilikKatalog = itemView.findViewById(R.id.textview_pemilik_katalog);
             TextviewLokasiKatalog = itemView.findViewById(R.id.textview_lokasi_katalog);
             constraintLayoutKatalog = itemView.findViewById(R.id.constraintlayout_recyclerview_katalog);
-
 
 
         }

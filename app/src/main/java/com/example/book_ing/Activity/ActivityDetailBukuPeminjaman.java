@@ -12,9 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.book_ing.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
-public class ActivityDetailBuku extends AppCompatActivity {
+public class ActivityDetailBukuPeminjaman extends AppCompatActivity {
 
-    private Button buttonObrolan, buttonTukar;
+    private Button buttonObrolan, buttonPinjam;
     private ViewGroup Parent;
 
     @Override
@@ -23,21 +23,23 @@ public class ActivityDetailBuku extends AppCompatActivity {
         setContentView(R.layout.activity_detail_buku);
 
         buttonObrolan = findViewById(R.id.button_obrolan);
-        buttonTukar = findViewById(R.id.button_tukar);
+        buttonPinjam = findViewById(R.id.button_);
+
+        buttonPinjam.setText("Pinjam");
 
         buttonObrolan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ActivityDetailBuku.this, ActivityDetailPesan.class));
+                startActivity(new Intent(ActivityDetailBukuPeminjaman.this, ActivityDetailPesan.class));
             }
         });
 
-        buttonTukar.setOnClickListener(new View.OnClickListener() {
+        buttonPinjam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                View modelBottomSheet = LayoutInflater.from(ActivityDetailBuku.this).inflate(R.layout.bottom_metode_pengiriman, null);
-                BottomSheetDialog dialog = new BottomSheetDialog(ActivityDetailBuku.this);
+                View modelBottomSheet = LayoutInflater.from(ActivityDetailBukuPeminjaman.this).inflate(R.layout.bottom_metode_pengiriman, null);
+                BottomSheetDialog dialog = new BottomSheetDialog(ActivityDetailBukuPeminjaman.this);
                 dialog.setContentView(modelBottomSheet);
                 dialog.show();
 
@@ -45,7 +47,7 @@ public class ActivityDetailBuku extends AppCompatActivity {
                 buttonLanjutkan.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        startActivity(new Intent(ActivityDetailBuku.this, ActivityTransaksiPenukaran2.class));
+                        startActivity(new Intent(ActivityDetailBukuPeminjaman.this, ActivityTransaksiPeminjaman2.class));
 
                     }
                 });

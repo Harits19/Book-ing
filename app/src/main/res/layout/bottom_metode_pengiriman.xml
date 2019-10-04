@@ -21,33 +21,46 @@
             style="@style/CustomButton1"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
             android:text="Lanjutkan"
             android:textAllCaps="false"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
-        <RadioButton
-            android:id="@+id/checkBox3"
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
             android:layout_height="wrap_content"
-            android:text="Kurir"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/checkBox2"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/textView15">
 
-        <RadioButton
-            android:id="@+id/checkBox2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Cash On Delivery (COD)"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/textView15"
-            app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
+
+
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cash On Delivery (COD)"
+                android:textSize="16sp" />
+            <RadioButton
+                android:id="@+id/radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kurir"
+                android:textSize="16sp" />
+
+
+        </RadioGroup>
         <TextView
             android:id="@+id/textView15"
             android:layout_width="match_parent"

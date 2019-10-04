@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-public class ActivityKatalog extends AppCompatActivity {
+public class ActivityKatalogPenukaran extends AppCompatActivity {
 
     private RecyclerView RecyclerViewKatalog;
     private ArrayList<Buku> ListKatalogBuku;
@@ -38,7 +38,7 @@ public class ActivityKatalog extends AppCompatActivity {
 
         addDataBuku();
         RecyclerViewKatalog = findViewById(R.id.recyclerview_katalog);
-        KatalogAdapter katalogAdapter = new KatalogAdapter(ListKatalogBuku);
+        KatalogAdapter katalogAdapter = new KatalogAdapter(ListKatalogBuku, "penukaran");
 //        RecyclerView.LayoutManager layoutManagerBerita = new LinearLayoutManager(this);
         RecyclerViewKatalog.setLayoutManager(new GridLayoutManager(this, 2));
         RecyclerViewKatalog.setAdapter(katalogAdapter);

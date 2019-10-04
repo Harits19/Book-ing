@@ -45,15 +45,15 @@ public class ActivityTransaksiPeminjaman2 extends AppCompatActivity {
         buttonStatusTransaksi = findViewById(R.id.button_status_transaksi);
 
 
-        buttonStatusTransaksi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                count++;
-                if(count == 1){
-                    buttonStatusTransaksi.setText("Buku Ingin Dikembalikan");
-                }
-            }
-        });
+//        buttonStatusTransaksi.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                count++;
+//                if(count == 1){
+//                    buttonStatusTransaksi.setText("Buku Ingin Dikembalikan");
+//                }
+//            }
+//        });
 
 
         autoCompleteTextViewKota = findViewById(R.id.autocompletetext_kota);

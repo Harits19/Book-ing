@@ -4,9 +4,9 @@ public class Berita {
 
     private String JudulBerita, RingkasanBerita;
 
-    public Berita(String judulTantangan, String poin) {
-        JudulBerita = judulTantangan;
-        RingkasanBerita = poin;
+    public Berita(String judulBerita, String ringkasanBuku) {
+        JudulBerita = judulBerita;
+        RingkasanBerita = ringkasanBuku;
     }
 
     public String getJudulBerita() {

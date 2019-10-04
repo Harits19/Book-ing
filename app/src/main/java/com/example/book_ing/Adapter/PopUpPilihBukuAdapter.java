@@ -9,11 +9,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.book_ing.Activity.ActivityDetailBuku;
-import com.example.book_ing.Activity.ActivityTransaksiPenukaran;
+import com.example.book_ing.Activity.ActivityDetailBukuPenukaran;
 import com.example.book_ing.Activity.ActivityTransaksiPenukaran2;
 import com.example.book_ing.OtherClass.Buku;
 import com.example.book_ing.R;
@@ -59,7 +57,7 @@ public class PopUpPilihBukuAdapter extends RecyclerView.Adapter<PopUpPilihBukuAd
         holder.buttonDetailBuku.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Parent.getContext().startActivity(new Intent(Parent.getContext(), ActivityDetailBuku.class));
+                Parent.getContext().startActivity(new Intent(Parent.getContext(), ActivityDetailBukuPenukaran.class));
             }
         });
 

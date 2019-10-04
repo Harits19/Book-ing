@@ -156,7 +156,7 @@
 
         <Button
             style="@style/CustomButton1"
-            android:id="@+id/button_tukar"
+            android:id="@+id/button_"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"

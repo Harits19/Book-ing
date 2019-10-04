@@ -10,8 +10,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.book_ing.Activity.ActivityDetailBuku;
-import com.example.book_ing.Activity.ActivityDetailPesan;
+import com.example.book_ing.Activity.ActivityDetailBukuPenukaran;
 import com.example.book_ing.OtherClass.Transaksi;
 import com.example.book_ing.R;
 
@@ -45,7 +44,7 @@ public class TukarNotifikasiAdapter extends RecyclerView.Adapter<TukarNotifikasi
         holder.buttonTerima.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Parent.getContext().startActivity(new Intent(Parent.getContext(), ActivityDetailBuku.class));
+                Parent.getContext().startActivity(new Intent(Parent.getContext(), ActivityDetailBukuPenukaran.class));
 
             }
         });

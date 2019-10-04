@@ -86,23 +86,23 @@
             </LinearLayout>
 
             <CheckBox
-                android:id="@+id/checkBox2"
+                android:id="@+id/radio2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Tukar Buku"
                 android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/checkBox3"
+                app:layout_constraintEnd_toEndOf="@+id/radio"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
             <CheckBox
-                android:id="@+id/checkBox3"
+                android:id="@+id/radio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pinjam Buku"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+                app:layout_constraintTop_toBottomOf="@+id/radio2" />
 
             <Button
                 style="@style/CustomButton1"

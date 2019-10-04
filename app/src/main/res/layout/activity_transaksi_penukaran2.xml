@@ -122,6 +122,7 @@
                  />
 
             <EditText
+                android:id="@+id/alamat_lengkap"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -212,7 +213,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="Muhammad Rizki A"
+                android:text="Asroru Maula"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="16sp" />
 
@@ -228,7 +229,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="Killing Henningway"
+                android:text="Bulan"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="16sp" />
 
@@ -357,7 +358,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:padding="8dp"
-            android:src="@drawable/buku"
+            android:src="@drawable/buku1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -385,7 +386,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="Abdullah Harits"
+                android:text="Muhammad Rizki"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="16sp" />
 
@@ -401,7 +402,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="Belajar Java"
+                android:text="Office"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="16sp" />
 

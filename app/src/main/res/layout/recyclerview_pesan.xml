@@ -14,6 +14,7 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageview_pengirim_pesan"
         android:layout_width="64dp"
+        android:src="@drawable/people"
         android:layout_height="64dp"
 
         android:layout_alignParentLeft="true"

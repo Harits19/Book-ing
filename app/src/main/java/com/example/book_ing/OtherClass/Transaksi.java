@@ -1,13 +1,33 @@
 package com.example.book_ing.OtherClass;
 
+import android.graphics.drawable.Drawable;
+
 public class Transaksi {
 
-    private String JudulBuku, WaktuPinjam, Pengarang;
+    private String JudulBuku, WaktuPinjam, Pengarang, PemilikBuku;
+    private Drawable drawableBukuTransaksi;
 
-    public Transaksi(String judulBuku, String waktuPinjam, String pengarang) {
+    public Drawable getDrawableBukuTransaksi() {
+        return drawableBukuTransaksi;
+    }
+
+    public void setDrawableBukuTransaksi(Drawable drawableBukuTransaksi) {
+        this.drawableBukuTransaksi = drawableBukuTransaksi;
+    }
+
+    public Transaksi(String judulBuku, String pemilikBuku, String pengarang, Drawable DrawableBukuTransaksi) {
         JudulBuku = judulBuku;
-        WaktuPinjam = waktuPinjam;
+        WaktuPinjam = pemilikBuku;
         Pengarang = pengarang;
+        drawableBukuTransaksi = DrawableBukuTransaksi;
+    }
+
+    public String getPemilikBuku() {
+        return PemilikBuku;
+    }
+
+    public void setPemilikBuku(String pemilikBuku) {
+        PemilikBuku = pemilikBuku;
     }
 
     public String getJudulBuku() {

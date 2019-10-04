@@ -30,7 +30,7 @@ public class FragmentTransaksiPinjam extends Fragment {
 
         addDataTransaksiPinjam();
         RecyclerViewTransaksiPinjam = view.findViewById(R.id.recyclerview_transaksi_pinjam);
-        TransaksiAdapter transaksiPinjamAdapter = new TransaksiAdapter(ListTransaksiPinjam);
+        TransaksiAdapter transaksiPinjamAdapter = new TransaksiAdapter(ListTransaksiPinjam, "pinjam");
         RecyclerView.LayoutManager layoutManagerTransaksiPinjam = new LinearLayoutManager(getActivity());
         RecyclerViewTransaksiPinjam.setLayoutManager(layoutManagerTransaksiPinjam);
         RecyclerViewTransaksiPinjam.setAdapter(transaksiPinjamAdapter);
@@ -41,11 +41,10 @@ public class FragmentTransaksiPinjam extends Fragment {
     void addDataTransaksiPinjam(){
 
         ListTransaksiPinjam = new ArrayList<>();
-        ListTransaksiPinjam.add(new Transaksi("Killing Henninway", "2 Oktober 2019", "Joh Smith"));
-        ListTransaksiPinjam.add(new Transaksi("Killing Henninway", "2 Oktober 2019", "Joh Smith"));
-        ListTransaksiPinjam.add(new Transaksi("Killing Henninway", "2 Oktober 2019", "Joh Smith"));
-        ListTransaksiPinjam.add(new Transaksi("Killing Henninway", "2 Oktober 2019", "Joh Smith"));
-        ListTransaksiPinjam.add(new Transaksi("Killing Henninway", "2 Oktober 2019", "Joh Smith"));
+        ListTransaksiPinjam.add(new Transaksi("Bulan", "Asroru Maula", "Tere Liye", getActivity().getDrawable(R.drawable.buku)));
+        ListTransaksiPinjam.add(new Transaksi("Microsoft", "Irwan Kurniawan", "John Smith", getActivity().getDrawable(R.drawable.buku1)));
+        ListTransaksiPinjam.add(new Transaksi("Revolusi", "Asroru Maula", "Tan Malaka", getActivity().getDrawable(R.drawable.buku2)));
+
 
 
 

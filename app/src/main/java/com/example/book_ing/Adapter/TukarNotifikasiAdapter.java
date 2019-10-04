@@ -10,7 +10,8 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.book_ing.Activity.ActivityDetailBukuPenukaran;
+import com.example.book_ing.Activity.ActivityTransaksiPenukaran;
+import com.example.book_ing.Activity.ActivityTransaksiPenukaran2;
 import com.example.book_ing.OtherClass.Transaksi;
 import com.example.book_ing.R;
 
@@ -44,7 +45,7 @@ public class TukarNotifikasiAdapter extends RecyclerView.Adapter<TukarNotifikasi
         holder.buttonTerima.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Parent.getContext().startActivity(new Intent(Parent.getContext(), ActivityDetailBukuPenukaran.class));
+                Parent.getContext().startActivity(new Intent(Parent.getContext(), ActivityTransaksiPenukaran2.class));
 
             }
         });
@@ -64,7 +65,7 @@ public class TukarNotifikasiAdapter extends RecyclerView.Adapter<TukarNotifikasi
             super(itemView);
             TextviewJudulBuku = itemView.findViewById(R.id.textview_judul_buku);
             TextviewPengarangBuku = itemView.findViewById(R.id.textview_pengarang_buku);
-            TextviewWaktuPinjam = itemView.findViewById(R.id.textview_Isbn_buku);
+            TextviewWaktuPinjam = itemView.findViewById(R.id.textview_pemilik);
             buttonTerima = itemView.findViewById(R.id.button_terima);
 
         }

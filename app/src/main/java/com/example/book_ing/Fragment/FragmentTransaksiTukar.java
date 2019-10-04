@@ -32,7 +32,7 @@ public class FragmentTransaksiTukar extends Fragment {
 
         addDataTransaksiTukar();
         RecyclerViewTransaksiTukar = view.findViewById(R.id.recyclerview_transaksi_tukar);
-        TransaksiAdapter TransaksiTukarAdapter = new TransaksiAdapter(ListTransaksiTukar);
+        TransaksiAdapter TransaksiTukarAdapter = new TransaksiAdapter(ListTransaksiTukar, "tukar");
         RecyclerView.LayoutManager layoutManagerTransaksiTukar = new LinearLayoutManager(getActivity());
         RecyclerViewTransaksiTukar.setLayoutManager(layoutManagerTransaksiTukar);
         RecyclerViewTransaksiTukar.setAdapter(TransaksiTukarAdapter);
@@ -56,11 +56,8 @@ public class FragmentTransaksiTukar extends Fragment {
     void addDataTransaksiTukar(){
 
         ListTransaksiTukar = new ArrayList<>();
-        ListTransaksiTukar.add(new Transaksi("Killing Henninway", "2 Oktober 2019", "Joh Smith"));
-        ListTransaksiTukar.add(new Transaksi("Killing Henninway", "2 Oktober 2019", "Joh Smith"));
-        ListTransaksiTukar.add(new Transaksi("Killing Henninway", "2 Oktober 2019", "Joh Smith"));
-        ListTransaksiTukar.add(new Transaksi("Killing Henninway", "2 Oktober 2019", "Joh Smith"));
-        ListTransaksiTukar.add(new Transaksi("Killing Henninway", "2 Oktober 2019", "Joh Smith"));
+        ListTransaksiTukar.add(new Transaksi("revolusi", "Asroru Maula", "Tere Liye", getActivity().getDrawable(R.drawable.buku2)));
+        ListTransaksiTukar.add(new Transaksi("Microsoft", "Irwan Kurniawan", "John Smith", getActivity().getDrawable(R.drawable.buku1)));
 
 
 
@@ -70,8 +67,9 @@ public class FragmentTransaksiTukar extends Fragment {
     void addListTukarNotifikasi(){
 
         ListTukarNotifikasi = new ArrayList<>();
-        ListTukarNotifikasi.add(new Transaksi("Killing Henninway", "2 Oktober 2019", "HAHA"));
-        ListTukarNotifikasi.add(new Transaksi("Killing Henninway", "2 Oktober 2019", "HAHA"));
+        ListTukarNotifikasi.add(new Transaksi("Bulan", "Asroru Maula", "Tere Liye", getActivity().getDrawable(R.drawable.buku)));
+
+
 
 
 

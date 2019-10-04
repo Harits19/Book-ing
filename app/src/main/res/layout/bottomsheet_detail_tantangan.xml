@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    android:text="Killing Henningway"
+                    android:text="Tere Liye"
                     android:drawableLeft="@drawable/nama_buku"
                     android:drawablePadding="12dp"
                     android:textSize="16sp" />

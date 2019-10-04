@@ -20,7 +20,7 @@
 
     <!-- Application theme. -->
     <style name="AppTheme1" parent="AppBaseTheme">
-        <item name="android:typeface">monospace</item>
+        <item name="android:typeface">sans</item>
     </style>
 
 

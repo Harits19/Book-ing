@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -45,6 +46,7 @@ public class KatalogAdapter extends RecyclerView.Adapter<KatalogAdapter.KatalogV
         holder.TextviewTerpinjamKatalog.setText(ListData.get(position).getTerpinjam());
         holder.TextviewPemilikKatalog.setText(ListData.get(position).getPemilik());
         holder.TextviewLokasiKatalog.setText(ListData.get(position).getLokasi());
+        holder.imageViewBuku.setImageDrawable(ListData.get(position).getImageViewBuku());
         holder.constraintLayoutKatalog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,6 +70,7 @@ public class KatalogAdapter extends RecyclerView.Adapter<KatalogAdapter.KatalogV
     public class KatalogViewHolder extends RecyclerView.ViewHolder {
         ConstraintLayout constraintLayoutKatalog;
         private TextView TextviewJudulKatalog, TextviewLokasiKatalog, TextviewJaminanKatalog, TextviewTerpinjamKatalog, TextviewPemilikKatalog;
+        private ImageView imageViewBuku;
 
         public KatalogViewHolder(View itemView) {
             super(itemView);
@@ -77,6 +80,7 @@ public class KatalogAdapter extends RecyclerView.Adapter<KatalogAdapter.KatalogV
             TextviewTerpinjamKatalog = itemView.findViewById(R.id.textview_terpinjam_katalog);
             TextviewPemilikKatalog = itemView.findViewById(R.id.textview_pemilik_katalog);
             TextviewLokasiKatalog = itemView.findViewById(R.id.textview_lokasi_katalog);
+            imageViewBuku = itemView.findViewById(R.id.imageView_buku);
             constraintLayoutKatalog = itemView.findViewById(R.id.constraintlayout_recyclerview_katalog);
 
 

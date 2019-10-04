@@ -40,13 +40,13 @@ public class ActivityTransaksiPeminjaman2 extends AppCompatActivity {
 //        constraintLayoutBukuDipilih = findViewById(R.id.constraintLayout_buku_dipilih);
 //        linearLayoutStatusBukuDia = findViewById(R.id.linearLayout_status_pengiriman_buku_dia);
 //        linearLayoutStatusBukuSaya = findViewById(R.id.linearLayout_status_pengiriman_buku_saya);
-//        buttonMasukResi = findViewById(R.id.button_masuk_resi);
+//        buttonLanjutkanResi = findViewById(R.id.button_masuk_resi);
 //        buttonStatusTransaksi = findViewById(R.id.button_status_transaksi);
 
 //        final FragmentManager fm = getSupportFragmentManager();
 //        final DialogFragmentPilihBuku dialogFragmentPilihBuku = new DialogFragmentPilihBuku(ListBuku);
 
-//        buttonMasukResi.setVisibility(View.GONE);
+//        buttonLanjutkanResi.setVisibility(View.GONE);
 //        linearLayoutStatusBukuDia.setVisibility(View.GONE);
 //        linearLayoutStatusBukuSaya.setVisibility(View.GONE);
 //        constraintLayoutBukuDipilih.setVisibility(View.GONE);
@@ -62,7 +62,7 @@ public class ActivityTransaksiPeminjaman2 extends AppCompatActivity {
 //        dialogResi = new Dialog(this);
 //        sheetView = this.getLayoutInflater().inflate(R.layout.popup_masukkan_nomer_resi, null);
 //
-//        buttonMasukResi.setOnClickListener(new View.OnClickListener() {
+//        buttonLanjutkanResi.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                dialogResi.setContentView(sheetView);

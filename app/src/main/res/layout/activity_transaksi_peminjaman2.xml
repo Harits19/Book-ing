@@ -10,7 +10,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Detail Penukaran"
+        android:text="Detail Peminjaman"
         android:layout_margin="16dp"
         android:textSize="24sp"
         android:textStyle="bold" />

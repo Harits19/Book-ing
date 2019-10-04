@@ -30,10 +30,10 @@
 <!--        />-->
 
     <ImageView
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:scaleType="center"
-        android:background="@drawable/clock"/>
+        android:scaleType="centerInside"
+        android:src="@drawable/clock"/>
 
     <TextView
         android:id="@+id/infoText"

@@ -36,7 +36,6 @@ public class ActivityKatalogPeminjaman extends AppCompatActivity {
         addDataBuku();
         RecyclerViewKatalog = findViewById(R.id.recyclerview_katalog);
         KatalogAdapter katalogAdapter = new KatalogAdapter(ListKatalogBuku, "peminjaman");
-//        RecyclerView.LayoutManager layoutManagerBerita = new LinearLayoutManager(this);
         RecyclerViewKatalog.setLayoutManager(new GridLayoutManager(this, 2));
         RecyclerViewKatalog.setAdapter(katalogAdapter);
 
@@ -56,15 +55,9 @@ public class ActivityKatalogPeminjaman extends AppCompatActivity {
     private void addDataBuku() {
 
         ListKatalogBuku = new ArrayList<>();
-        ListKatalogBuku.add(new Buku("Killing Heningway", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
-        ListKatalogBuku.add(new Buku("Killing HeningwayA", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
-        ListKatalogBuku.add(new Buku("Killing HeningwayB", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
-        ListKatalogBuku.add(new Buku("Killing HeningwayC", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
-        ListKatalogBuku.add(new Buku("Killing HeningwayD", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
-        ListKatalogBuku.add(new Buku("Killing HeningwayE", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
-        ListKatalogBuku.add(new Buku("Killing HeningwayF", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
-        ListKatalogBuku.add(new Buku("Killing HeningwayG", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
-        ListKatalogBuku.add(new Buku("Killing HeningwayE", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
+        ListKatalogBuku.add(new Buku("Killing Heningway", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2", getDrawable(R.drawable.buku)));
+        ListKatalogBuku.add(new Buku("Killing Heningway", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2", getDrawable(R.drawable.buku2)));
+        ListKatalogBuku.add(new Buku("Killing Heningway", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2", getDrawable(R.drawable.buku1)));
 
     }
 }

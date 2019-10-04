@@ -51,27 +51,38 @@
             android:textStyle="bold"
             />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
 
-            android:layout_marginTop="8dp"
-            android:hint="Kota"
-            android:padding="4dp"
-            android:textSize="16sp"
-            />
+                android:layout_marginTop="8dp"
+                android:hint="Kota"
+                android:padding="4dp"
+                android:text="Malang"
+                android:textSize="16sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
 
-            android:layout_marginTop="8dp"
-            android:padding="4dp"
-            android:hint="Kecamatan"
-            android:textSize="16sp"
-            />
+                android:layout_marginTop="8dp"
+                android:hint="Kecamatan"
+                android:padding="4dp"
+                android:text="Mojolanggu"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Kecamatan"
+                android:padding="4dp"
+                android:text="Jl. Telaga Warna No.98Tlogomas, Kec. Lowokwaru, Kota Malang, Jawa Timur 65144
+"
+                android:textSize="16sp" />
+
 
             <TextView
                 android:id="@+id/textView222"
@@ -110,6 +121,18 @@
                 android:textSize="16sp"
                  />
 
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_rounded"                android:padding="4dp"
+                android:completionThreshold="1"
+                android:hint="Alamat Lengkap"
+                android:popupBackground="#fff"
+                android:textSize="16sp"
+                />
+
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -119,17 +142,17 @@
                 android:textStyle="bold"
                 />
 
-            <EditText
+            <TextView
+                android:id="@+id/textView_resi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="#FFF"
-                android:padding="4dp"
                 android:completionThreshold="1"
-                android:hint="Masukkan Resi"
+                android:hint="-"
+                android:padding="4dp"
                 android:popupBackground="#fff"
-                android:textSize="16sp"
-                />
+                android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -223,44 +246,47 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView4">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lama Peminjaman "
+                android:textSize="16sp" />
 
             <Button
                 style="@style/CustomButton1"
-
+                android:id="@+id/button_tambah_hari"
                 android:layout_width="32dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="right"
 
-                android:text="-"
+                android:text="+"
 
                 android:textSize="12sp" />
 
 
             <TextView
-                android:layout_width="32dp"
+                android:id="@+id/textView_lama_peminjaman"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#ECFCFF"
                 android:gravity="center"
-                android:hint="0"
-                android:inputType="number"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:hint="0 Hari"
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimaryDark"
                 android:textColorHint="@color/colorPrimaryDark"
                 android:textSize="16sp" />
             <Button
                 style="@style/CustomButton1"
-
+                android:id="@+id/button_kurang_hari"
                 android:layout_width="32dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="left"
-                android:text="+"
+                android:text="-"
                 android:textSize="12sp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" Jumlah Hari"
-                android:textSize="16sp" />
+
 
 
         </LinearLayout>

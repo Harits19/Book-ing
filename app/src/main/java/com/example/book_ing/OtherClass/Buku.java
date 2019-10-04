@@ -1,8 +1,20 @@
 package com.example.book_ing.OtherClass;
 
+import android.graphics.drawable.Drawable;
+import android.widget.ImageView;
+
 public class Buku {
 
     private String JudulBuku, JaminanBuku, Pengarang, Pemilik, Lokasi, Terpinjam, Isbn;
+    Drawable ImageViewBuku;
+
+    public Drawable getImageViewBuku() {
+        return ImageViewBuku;
+    }
+
+    public void setImageViewBuku(Drawable imageViewBuku) {
+        this.ImageViewBuku = imageViewBuku;
+    }
 
     public Buku(String judulBuku, String jaminanBuku) {
         JudulBuku = judulBuku;
@@ -23,6 +35,13 @@ public class Buku {
         Isbn = isbn;
     }
 
+    public Buku(String judulBuku, String jaminanBuku, Drawable imageViewBuku) {
+        JudulBuku = judulBuku;
+        JaminanBuku = jaminanBuku;
+        ImageViewBuku = imageViewBuku;
+    }
+
+
     public Buku(String judulBuku, String jaminanBuku, String pengarang, String pemilik, String lokasi, String terpinjam) {
         JudulBuku = judulBuku;
         JaminanBuku = jaminanBuku;
@@ -30,6 +49,16 @@ public class Buku {
         Pemilik = pemilik;
         Terpinjam = terpinjam;
         Lokasi = lokasi;
+    }
+
+    public Buku(String judulBuku, String jaminanBuku, String pengarang, String pemilik, String lokasi, String terpinjam, Drawable imageViewBuku) {
+        JudulBuku = judulBuku;
+        JaminanBuku = jaminanBuku;
+        Pengarang = pengarang;
+        Pemilik = pemilik;
+        Terpinjam = terpinjam;
+        Lokasi = lokasi;
+        ImageViewBuku = imageViewBuku;
     }
 
     public String getTerpinjam() {

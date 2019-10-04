@@ -9,7 +9,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.book_ing.Adapter.BukuAdapter;
 import com.example.book_ing.Adapter.KatalogAdapter;
 import com.example.book_ing.OtherClass.Buku;
 import com.example.book_ing.R;

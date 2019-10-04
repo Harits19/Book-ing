@@ -4,6 +4,7 @@ package com.example.book_ing.Adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -38,6 +39,7 @@ public class BukuAdapter extends RecyclerView.Adapter<BukuAdapter.BukuViewHolder
     public void onBindViewHolder(BukuViewHolder holder, int position) {
         holder.TextviewJudulBuku.setText(ListData.get(position).getJudulBuku());
         holder.TextviewJaminanBuku.setText(ListData.get(position).getJaminanBuku());
+        holder.imageViewBuku.setImageDrawable(ListData.get(position).getImageViewBuku());
         holder.linearLayoutBuku.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,6 +59,7 @@ public class BukuAdapter extends RecyclerView.Adapter<BukuAdapter.BukuViewHolder
 
     public class BukuViewHolder extends RecyclerView.ViewHolder {
         private TextView TextviewJudulBuku, TextviewJaminanBuku;
+        private ImageView imageViewBuku;
         private LinearLayout linearLayoutBuku;
 
         public BukuViewHolder(View itemView) {
@@ -64,6 +67,7 @@ public class BukuAdapter extends RecyclerView.Adapter<BukuAdapter.BukuViewHolder
             TextviewJudulBuku = itemView.findViewById(R.id.textview_jaminan_buku_akun);
             TextviewJaminanBuku = itemView.findViewById(R.id.textview_jaminan_buku_akun);
             linearLayoutBuku = itemView.findViewById(R.id.linearLayoutBuku);
+            imageViewBuku = itemView.findViewById(R.id.imageView_buku);
 
         }
     }

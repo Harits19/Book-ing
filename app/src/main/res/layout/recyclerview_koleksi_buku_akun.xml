@@ -21,6 +21,7 @@
             android:padding="8dp">
 
             <ImageView
+                android:id="@+id/imageView_buku"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:padding="8dp"

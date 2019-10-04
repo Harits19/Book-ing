@@ -114,10 +114,9 @@ public class FragmentBeranda extends Fragment {
 
     private void addListTantangan() {
         ListTantangan = new ArrayList<>();
-        ListTantangan.add(new Tantangan("asdfghjklsdfghjsdfghjkl;sdfghjkl", "2999"));
-        ListTantangan.add(new Tantangan("AA", "2999"));
-        ListTantangan.add(new Tantangan("AA", "2999"));
-        ListTantangan.add(new Tantangan("AA", "2999"));
+        ListTantangan.add(new Tantangan("asdfghjklsdfghjsdfghjkl;sdfghjkl", "2999", getActivity().getDrawable(R.drawable.buku)));
+        ListTantangan.add(new Tantangan("AA", "2999", getActivity().getDrawable(R.drawable.buku1)));
+        ListTantangan.add(new Tantangan("AA", "2999", getActivity().getDrawable(R.drawable.buku2)));
 
     }
 

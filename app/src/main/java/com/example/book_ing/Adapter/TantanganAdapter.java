@@ -4,6 +4,7 @@ package com.example.book_ing.Adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -41,7 +42,8 @@ public class TantanganAdapter extends RecyclerView.Adapter<TantanganAdapter.Tant
     @Override
     public void onBindViewHolder(final TantanganViewHolder holder, int position) {
         holder.TextviewJudul.setText(ListData.get(position).getJudulTantangan());
-        holder.TextviewPoin.setText(ListData.get(position).getPoin());
+        holder.TextviewPoin.setText(ListData.get(position).getPoin()+ " Poin");
+        holder.imageViewTantangan.setImageDrawable(ListData.get(position).getImageViewTantangan());
         holder.cardViewTantangan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,6 +64,7 @@ public class TantanganAdapter extends RecyclerView.Adapter<TantanganAdapter.Tant
     public class TantanganViewHolder extends RecyclerView.ViewHolder {
         private TextView TextviewJudul, TextviewPoin;
         private CardView cardViewTantangan;
+        ImageView imageViewTantangan;
 
 
         public TantanganViewHolder(View itemView) {
@@ -69,6 +72,7 @@ public class TantanganAdapter extends RecyclerView.Adapter<TantanganAdapter.Tant
             TextviewJudul = itemView.findViewById(R.id.textview_judul_buku);
             TextviewPoin = itemView.findViewById(R.id.textview_jaminan_buku);
             cardViewTantangan = itemView.findViewById(R.id.cardview_tantangan);
+            imageViewTantangan = itemView.findViewById(R.id.imageView_tantangan);
 
 
         }

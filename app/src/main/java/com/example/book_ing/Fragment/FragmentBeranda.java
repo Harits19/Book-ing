@@ -114,18 +114,19 @@ public class FragmentBeranda extends Fragment {
 
     private void addListTantangan() {
         ListTantangan = new ArrayList<>();
-        ListTantangan.add(new Tantangan("asdfghjklsdfghjsdfghjkl;sdfghjkl", "2999", getActivity().getDrawable(R.drawable.buku)));
-        ListTantangan.add(new Tantangan("AA", "2999", getActivity().getDrawable(R.drawable.buku1)));
-        ListTantangan.add(new Tantangan("AA", "2999", getActivity().getDrawable(R.drawable.buku2)));
+        ListTantangan.add(new Tantangan("Membaca Buku Hujan", "1000", getActivity().getDrawable(R.drawable.buku)));
+        ListTantangan.add(new Tantangan("Membaca Buku Revolusi Belum Selesai", "2000", getActivity().getDrawable(R.drawable.buku2)));
+        ListTantangan.add(new Tantangan("Buku Pintar Microsoft Office", "1500", getActivity().getDrawable(R.drawable.buku1)));
 
     }
 
     private void addDataBerita() {
         ListBerita = new ArrayList<>();
-        ListBerita.add(new Berita("AA", "AA"));
-        ListBerita.add(new Berita("BB", "AA"));
-        ListBerita.add(new Berita("CC", "CC"));
-        ListBerita.add(new Berita("DD", "DD"));
+        ListBerita.add(new Berita("Gramedia 'Buka Gudang' Jual Buku Murah, Diskon hingga 50%, Buku Komik Cuma Rp 1.000", "Toko Buku Gramedia menjual buku-buku berbagai macam dengan harga diskon gede-gedean. Diskon buku dengan tema 'Buka Gudang' Gramedia itu digelar di kompleks Kompas Gramedia, Palmerah Selatan, Jakarta. Diskon gede-gedean diadakan sejak 1 Oktober hingga 31 Oktober 2019", getActivity().getDrawable(R.drawable.berita)));
+        ListBerita.add(new Berita("Gramedia 'Buka Gudang' Jual Buku Murah, Diskon hingga 50%, Buku Komik Cuma Rp 1.000", "Toko Buku Gramedia menjual buku-buku berbagai macam dengan harga diskon gede-gedean. Diskon buku dengan tema 'Buka Gudang' Gramedia itu digelar di kompleks Kompas Gramedia, Palmerah Selatan, Jakarta. Diskon gede-gedean diadakan sejak 1 Oktober hingga 31 Oktober 2019", getActivity().getDrawable(R.drawable.berita1)));
+        ListBerita.add(new Berita("Gramedia 'Buka Gudang' Jual Buku Murah, Diskon hingga 50%, Buku Komik Cuma Rp 1.000", "Toko Buku Gramedia menjual buku-buku berbagai macam dengan harga diskon gede-gedean. Diskon buku dengan tema 'Buka Gudang' Gramedia itu digelar di kompleks Kompas Gramedia, Palmerah Selatan, Jakarta. Diskon gede-gedean diadakan sejak 1 Oktober hingga 31 Oktober 2019", getActivity().getDrawable(R.drawable.berita2)));
+
+
 //
     }
 }

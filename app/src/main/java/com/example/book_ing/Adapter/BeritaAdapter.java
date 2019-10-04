@@ -4,6 +4,7 @@ package com.example.book_ing.Adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -35,6 +36,7 @@ public class BeritaAdapter extends RecyclerView.Adapter<BeritaAdapter.BeritaView
     public void onBindViewHolder(BeritaViewHolder holder, int position) {
         holder.TextviewJudulBerita.setText(ListData.get(position).getJudulBerita());
         holder.TextviewRingkasanBerita.setText(ListData.get(position).getRingkasanBerita());
+        holder.imageViewBerita.setImageDrawable(ListData.get(position).getImageBerita());
 
     }
 
@@ -45,11 +47,13 @@ public class BeritaAdapter extends RecyclerView.Adapter<BeritaAdapter.BeritaView
 
     public class BeritaViewHolder extends RecyclerView.ViewHolder {
         private TextView TextviewJudulBerita, TextviewRingkasanBerita;
+        private ImageView imageViewBerita;
 
         public BeritaViewHolder(View itemView) {
             super(itemView);
             TextviewJudulBerita = itemView.findViewById(R.id.textview_judul_berita);
             TextviewRingkasanBerita = itemView.findViewById(R.id.textview_ringkasan_berita);
+            imageViewBerita = itemView.findViewById(R.id.imageview_berita);
 
         }
     }

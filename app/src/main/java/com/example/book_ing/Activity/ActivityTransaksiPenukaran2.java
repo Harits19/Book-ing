@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,9 +33,10 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
     public static ConstraintLayout constraintLayoutBukuDipilih;
     public Button buttonLanjutkanResi, buttonStatusTransaksi, buttonTambahHari, buttonKurangHari;
     View sheetView;
-    private int lamaPinjam = 0;
     int count = 0;
     AutoCompleteTextView autoCompleteTextViewKota, autoCompleteTextViewKecamatan;
+    private int lamaPinjam = 0;
+    private int stateButton = 0;
     private EditText editTextResi;
     private TextView textViewResi, textViewLamaPeminjaman;
     private RecyclerView statusPengirimanDia, statusPengirimanSaya;
@@ -48,6 +50,8 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaksi_penukaran2);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
         addDataBuku();
         addStatusPengiriman();
 
@@ -65,7 +69,7 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
         buttonTambahHari.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                lamaPinjam ++;
+                lamaPinjam++;
                 textViewLamaPeminjaman.setText(lamaPinjam + " Hari");
             }
         });
@@ -73,7 +77,7 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
         buttonKurangHari.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                lamaPinjam --;
+                lamaPinjam--;
                 textViewLamaPeminjaman.setText(lamaPinjam + " Hari");
             }
         });
@@ -91,61 +95,119 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
         buttonLanjutkanResi = sheetView.findViewById(R.id.button_lanjutkan);
         editTextResi = sheetView.findViewById(R.id.editText_resi);
 
-
-        buttonLanjutkanResi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialogResi.setContentView(sheetView);
-                dialogResi.getWindow().setLayout(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT);
-                dialogResi.show();
-            }
-        });
+        dialogResi.setContentView(sheetView);
+        dialogResi.getWindow().setLayout(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT);
 
         buttonStatusTransaksi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialogResi.setContentView(sheetView);
-                dialogResi.getWindow().setLayout(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT);
-                dialogResi.show();
+                if(stateButton == 0){
 
-                buttonLanjutkanResi.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        linearLayoutStatusBukuDia.setVisibility(View.VISIBLE);
-                        linearLayoutStatusBukuSaya.setVisibility(View.VISIBLE);
-                        textViewResi.setText(editTextResi.getText().toString());
-                        buttonStatusTransaksi.setText("Dalam Perjalanan");
-                        buttonStatusTransaksi.setEnabled(false);
-                        buttonStatusTransaksi.setBackgroundColor(Color.parseColor("#f0f0f0"));
-                        buttonStatusTransaksi.setTextColor(Color.parseColor("#000000"));
-                        dialogResi.dismiss();
+                    dialogResi.show();
 
-                      Handler handler1 = new Handler();
-                      Handler handler2 = new Handler();
+                    buttonLanjutkanResi.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            linearLayoutStatusBukuDia.setVisibility(View.VISIBLE);
+                            linearLayoutStatusBukuSaya.setVisibility(View.VISIBLE);
+                            textViewResi.setText(editTextResi.getText().toString());
+                            buttonStatusTransaksi.setText("Dalam Perjalanan");
+                            buttonStatusTransaksi.setEnabled(false);
+                            buttonStatusTransaksi.setBackgroundColor(Color.parseColor("#f0f0f0"));
+                            buttonStatusTransaksi.setTextColor(Color.parseColor("#000000"));
+                            addStatusPengiriman();
+                            dialogResi.dismiss();
 
+                            Handler handler2 = new Handler();
+                            handler2.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
 
-                        handler1.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                ListStatusPengiriman.add(new StatusPengiriman());
-                            }
-                        }, 5000);
-
-                        handler2.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-
-                                buttonStatusTransaksi.setEnabled(true);
-                                buttonStatusTransaksi.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-                                buttonStatusTransaksi.setTextColor(Color.parseColor("#FFFFFF"));
-
-                            }
-                        }, 1000);
+                                    buttonStatusTransaksi.setEnabled(true);
+                                    buttonStatusTransaksi.setBackgroundResource(R.drawable.button_unpressed1);
+                                    buttonStatusTransaksi.setTextAppearance(R.style.CustomButton1);
+                                    buttonStatusTransaksi.setText("Buku Diterima");
 
 
+                                }
+                            }, 5000);
 
-                    }
-                });
+                            stateButton = 1;
+
+
+                        }
+                    });
+                }else if(stateButton == 1){
+                    buttonStatusTransaksi.setText("Sedang Dipinjam");
+                    buttonStatusTransaksi.setEnabled(false);
+                    buttonStatusTransaksi.setBackgroundColor(Color.parseColor("#f0f0f0"));
+                    buttonStatusTransaksi.setTextColor(Color.parseColor("#000000"));
+                    linearLayoutStatusBukuDia.setVisibility(View.GONE);
+                    linearLayoutStatusBukuSaya.setVisibility(View.GONE);
+
+
+                    Handler handler2 = new Handler();
+                    handler2.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            buttonStatusTransaksi.setEnabled(true);
+                            buttonStatusTransaksi.setBackgroundResource(R.drawable.button_unpressed1);
+                            buttonStatusTransaksi.setTextAppearance(R.style.CustomButton1);
+                            buttonStatusTransaksi.setText("Kembalikan Buku");
+
+
+                        }
+                    }, 7000);
+
+                    stateButton = 2;
+
+                }else if(stateButton == 2){
+
+                    dialogResi.show();
+
+                    buttonLanjutkanResi.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            linearLayoutStatusBukuDia.setVisibility(View.VISIBLE);
+                            linearLayoutStatusBukuSaya.setVisibility(View.VISIBLE);
+                            textViewResi.setText(editTextResi.getText().toString());
+                            buttonStatusTransaksi.setText("Dalam Perjalanan");
+                            buttonStatusTransaksi.setEnabled(false);
+                            buttonStatusTransaksi.setBackgroundColor(Color.parseColor("#f0f0f0"));
+                            buttonStatusTransaksi.setTextColor(Color.parseColor("#000000"));
+                            addStatusPengiriman();
+                            dialogResi.dismiss();
+
+                            Handler handler2 = new Handler();
+                            handler2.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+
+                                    buttonStatusTransaksi.setEnabled(true);
+                                    buttonStatusTransaksi.setBackgroundResource(R.drawable.button_unpressed1);
+                                    buttonStatusTransaksi.setTextAppearance(R.style.CustomButton1);
+                                    buttonStatusTransaksi.setText("Buku Diterima");
+
+
+                                }
+                            }, 5000);
+
+                            stateButton = 3;
+
+
+                        }
+                    });
+                }else if(stateButton == 3 ){
+                    buttonStatusTransaksi.setText("Penukaran Buku Selesai");
+                    buttonStatusTransaksi.setEnabled(false);
+                    buttonStatusTransaksi.setBackgroundColor(Color.parseColor("#f0f0f0"));
+                    buttonStatusTransaksi.setTextColor(Color.parseColor("#000000"));
+                    linearLayoutStatusBukuDia.setVisibility(View.GONE);
+                    linearLayoutStatusBukuSaya.setVisibility(View.GONE);
+                }
+
+
 
 
             }
@@ -188,13 +250,6 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
         ListBuku.add(new Buku("Killing Heningway", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
         ListBuku.add(new Buku("Buku Pintar Microsoft Office 2007 & 2010", "Rp 25.000", "Jarot S.", "Hilmi Aziz", "Sawojajar", "5"));
         ListBuku.add(new Buku("Revolusi Belum Selesai", "Rp 15.000", "Budi Setiyono", "Irwan Kurniawan", "Tlogomas", "4"));
-        ListBuku.add(new Buku("Killing HeningwayC", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
-        ListBuku.add(new Buku("Killing HeningwayD", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
-        ListBuku.add(new Buku("Killing HeningwayE", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
-        ListBuku.add(new Buku("Killing HeningwayF", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
-        ListBuku.add(new Buku("Killing HeningwayG", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
-        ListBuku.add(new Buku("Killing HeningwayE", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
-
     }
 
     private void addStatusPengiriman() {

@@ -24,9 +24,9 @@ public class ActivityTransaksiPeminjaman2 extends AppCompatActivity {
     public static ConstraintLayout constraintLayoutBukuDipilih;
     public Button buttonMasukResi, buttonStatusTransaksi;
     View sheetView;
-    private Dialog dialogResi;
     int count = 0;
     AutoCompleteTextView autoCompleteTextViewKota, autoCompleteTextViewKecamatan;
+    private Dialog dialogResi;
     private ArrayList<Buku> ListBuku;
     private LinearLayout linearLayoutStatusBukuDia, linearLayoutStatusBukuSaya;
 
@@ -35,72 +35,51 @@ public class ActivityTransaksiPeminjaman2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaksi_peminjaman2);
-        addDataBuku();
+//        addDataBuku();
 
-        buttonPilihBuku = findViewById(R.id.button_pilih_buku);
-        constraintLayoutBukuDipilih = findViewById(R.id.constraintLayout_buku_dipilih);
-        linearLayoutStatusBukuDia = findViewById(R.id.linearLayout_status_pengiriman_buku_dia);
-        linearLayoutStatusBukuSaya = findViewById(R.id.linearLayout_status_pengiriman_buku_saya);
-        buttonMasukResi = findViewById(R.id.button_masuk_resi);
-        buttonStatusTransaksi = findViewById(R.id.button_status_transaksi);
+//        constraintLayoutBukuDipilih = findViewById(R.id.constraintLayout_buku_dipilih);
+//        linearLayoutStatusBukuDia = findViewById(R.id.linearLayout_status_pengiriman_buku_dia);
+//        linearLayoutStatusBukuSaya = findViewById(R.id.linearLayout_status_pengiriman_buku_saya);
+//        buttonMasukResi = findViewById(R.id.button_masuk_resi);
+//        buttonStatusTransaksi = findViewById(R.id.button_status_transaksi);
+
+//        final FragmentManager fm = getSupportFragmentManager();
+//        final DialogFragmentPilihBuku dialogFragmentPilihBuku = new DialogFragmentPilihBuku(ListBuku);
+
+//        buttonMasukResi.setVisibility(View.GONE);
+//        linearLayoutStatusBukuDia.setVisibility(View.GONE);
+//        linearLayoutStatusBukuSaya.setVisibility(View.GONE);
+//        constraintLayoutBukuDipilih.setVisibility(View.GONE);
 
 
-//        buttonStatusTransaksi.setOnClickListener(new View.OnClickListener() {
+//        sheetView = this.getLayoutInflater().inflate(R.layout.popup_pilih_kurir, null);
+//
+//
+//        autoCompleteTextViewKota = findViewById(R.id.autocompletetext_kota);
+//        autoCompleteTextViewKecamatan = findViewById(R.id.autocompletetext_kecamatan);
+//
+//
+//        dialogResi = new Dialog(this);
+//        sheetView = this.getLayoutInflater().inflate(R.layout.popup_masukkan_nomer_resi, null);
+//
+//        buttonMasukResi.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                count++;
-//                if(count == 1){
-//                    buttonStatusTransaksi.setText("Buku Ingin Dikembalikan");
-//                }
+//                dialogResi.setContentView(sheetView);
+//                dialogResi.getWindow().setLayout(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT);
+//                dialogResi.show();
 //            }
 //        });
-
-
-        autoCompleteTextViewKota = findViewById(R.id.autocompletetext_kota);
-        autoCompleteTextViewKecamatan = findViewById(R.id.autocompletetext_kecamatan);
-
-//        if (autoCompleteTextViewKecamatan.getText().toString() != null) {
-//            buttonMasukResi.setVisibility(View.VISIBLE);
-//        } else if (autoCompleteTextViewKecamatan.getText().toString() == null) {
-//            buttonMasukResi.setVisibility(View.GONE);
-//        } else {
 //
-//        }
-
-        dialogResi =  new Dialog(this);
-//        View
-        sheetView = this.getLayoutInflater().inflate(R.layout.popup_masukkan_nomer_resi, null);
-
-        buttonMasukResi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialogResi.setContentView(sheetView);
-                dialogResi.getWindow().setLayout(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT);
-                dialogResi.show();
-            }
-        });
-
-        buttonMasukResi.setVisibility(View.GONE);
-        buttonPilihBuku.setVisibility(View.VISIBLE);
-        linearLayoutStatusBukuDia.setVisibility(View.GONE);
-        linearLayoutStatusBukuSaya.setVisibility(View.GONE);
-        constraintLayoutBukuDipilih.setVisibility(View.GONE);
-
-
-        final FragmentManager fm = getSupportFragmentManager();
-        final DialogFragmentPilihBuku dialogFragmentPilihBuku = new DialogFragmentPilihBuku(ListBuku);
-
-
-        sheetView = this.getLayoutInflater().inflate(R.layout.popup_pilih_kurir, null);
-
-        buttonPilihBuku.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                dialogFragmentPilihBuku.show(fm, "Tv Tag");
-
-            }
-        });
+//
+//        buttonPilihBuku.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                dialogFragmentPilihBuku.show(fm, "Tv Tag");
+//
+//            }
+//        });
 
 
     }

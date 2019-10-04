@@ -30,8 +30,9 @@
 <!--        />-->
 
     <ImageView
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="250dp"
+        android:scaleType="center"
         android:background="@drawable/clock"/>
 
     <TextView
@@ -46,6 +47,7 @@
 
     <Button
         android:onClick="takePicture"
+        style="@style/CustomButton1"
         android:id="@+id/photoButton"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"

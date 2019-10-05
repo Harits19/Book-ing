@@ -45,6 +45,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="8dp"
             android:paddingTop="8dp"
+            android:layout_marginTop="8dp"
             android:textStyle="bold"
             android:text="Statistik"
             android:textSize="16sp"
@@ -226,6 +227,7 @@
                 android:layout_height="wrap_content"
                 android:text="Status : Buku Sangat Diminati"
                 android:textSize="16sp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="@+id/textView7"
                 app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -234,6 +236,7 @@
                 android:layout_height="wrap_content"
                 android:text="Rekomendasi : Tambahkan 13 buku untuk meningkatkan pendapatanmu seabanyak Rp 273.000/Bulan"
                 android:textSize="16sp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textView7"
                 app:layout_constraintTop_toBottomOf="@+id/textView13" />

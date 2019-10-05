@@ -89,11 +89,11 @@ public class ActivityWelcome extends AppCompatActivity {
 
         signInButton = (SignInButton) findViewById(R.id.sign_in_button);
 
-        SignOutButton= (Button) findViewById(R.id.sign_out);
-
-        LoginUserName = (TextView) findViewById(R.id.textViewName);
-
-        LoginUserEmail = (TextView) findViewById(R.id.textViewEmail);
+//        SignOutButton= (Button) findViewById(R.id.sign_out);
+//
+//        LoginUserName = (TextView) findViewById(R.id.textViewName);
+//
+//        LoginUserEmail = (TextView) findViewById(R.id.textViewEmail);
 
         signInButton = (com.google.android.gms.common.SignInButton)findViewById(R.id.sign_in_button);
 

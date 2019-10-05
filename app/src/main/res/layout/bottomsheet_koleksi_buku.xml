@@ -53,7 +53,7 @@
                     android:drawablePadding="12dp"
                     android:gravity="bottom"
                     android:lines="2"
-                    android:text="Killing Henningway"
+                    android:text="Bulan"
                     android:textSize="16sp" />
 
                 <TextView
@@ -61,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    android:text="Max Corner"
+                    android:text="Tere Liye"
                     android:drawableLeft="@drawable/pengarang"
                     android:drawablePadding="12dp"
                     android:textSize="16sp" />

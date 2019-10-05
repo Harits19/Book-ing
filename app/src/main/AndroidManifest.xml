@@ -27,7 +27,7 @@
         <activity android:name=".Activity.ActivityDetailBukuPenukaran" />
         <activity android:name=".Activity.ActivityDetailBukuPeminjaman" />
         <activity android:name=".Activity.ActivityTambahSaldo" />
-        <activity android:name=".Welcome.ActivityWelcome">
+        <activity android:name=".Activity.ActivityBottomNavigation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,7 +38,7 @@
         <activity android:name=".Welcome.ActivityMasuk" />
         <activity android:name=".Activity.ActivityTambahKoleksiBuku" />
         <activity android:name=".Activity.AlarmActivity" />
-        <activity android:name=".Activity.ActivityBottomNavigation" />
+        <activity android:name=".Welcome.ActivityWelcome" />
         <activity android:name=".Activity.TimerActivity" />
         <activity android:name=".Activity.MainActivity"/>
 

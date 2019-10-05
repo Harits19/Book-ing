@@ -44,7 +44,7 @@
                     android:layout_marginRight="8dp"
                     android:drawableLeft="@drawable/tantangan"
                     android:drawablePadding="12dp"
-                    android:text="Tantangan Membaca"
+                    android:text="Tantangan Membaca Buku Kiat Sukses Kewirausahaan"
                     android:textSize="16sp" />
 
                 <TextView
@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    android:text="Killing Henningway"
+                    android:text="Dr. Karyoto, SE., M.M., Ak."
                     android:drawableLeft="@drawable/nama_buku"
                     android:drawablePadding="12dp"
                     android:textSize="16sp" />

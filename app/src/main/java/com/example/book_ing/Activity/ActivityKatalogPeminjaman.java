@@ -55,9 +55,9 @@ public class ActivityKatalogPeminjaman extends AppCompatActivity {
     private void addDataBuku() {
 
         ListKatalogBuku = new ArrayList<>();
-        ListKatalogBuku.add(new Buku("Killing Heningway", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2", getDrawable(R.drawable.buku)));
-        ListKatalogBuku.add(new Buku("Killing Heningway", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2", getDrawable(R.drawable.buku2)));
-        ListKatalogBuku.add(new Buku("Killing Heningway", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2", getDrawable(R.drawable.buku1)));
+        ListKatalogBuku.add(new Buku("Bulan", "Rp 30.000", "Tere Liye", "Asroru Maula", "Lowokwaru", "2", getDrawable(R.drawable.buku)));
+        ListKatalogBuku.add(new Buku("Revolusi", "Rp 20.000", "Tan Malaka", "Asroru Maula", "Mojolanggu", "10", getDrawable(R.drawable.buku2)));
+        ListKatalogBuku.add(new Buku("Office", "Rp 5.000", "John Smith", "Abdullah Harits", "Mojolanggu", "5", getDrawable(R.drawable.buku1)));
 
     }
 }

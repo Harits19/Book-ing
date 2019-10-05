@@ -38,7 +38,7 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
     private int lamaPinjam = 0;
     private int stateButton = 0;
     private EditText editTextResi;
-    private TextView textViewResi, textViewLamaPeminjaman;
+    private TextView textViewResi, textViewLamaPeminjaman, alamatLengkap;
     private RecyclerView statusPengirimanDia, statusPengirimanSaya;
     private Dialog dialogResi;
     private ArrayList<Buku> ListBuku;
@@ -62,6 +62,7 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
         buttonLanjutkanResi = findViewById(R.id.button_masuk_resi);
         buttonStatusTransaksi = findViewById(R.id.button_status_transaksi);
         buttonTambahHari = findViewById(R.id.button_tambah_hari);
+        alamatLengkap = findViewById(R.id.alamat_lengkap);
         buttonKurangHari = findViewById(R.id.button_kurang_hari);
         textViewLamaPeminjaman = findViewById(R.id.textView_lama_peminjaman);
 
@@ -102,6 +103,10 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(stateButton == 0){
+
+                    autoCompleteTextViewKecamatan.setEnabled(false);
+                    autoCompleteTextViewKota.setEnabled(false);
+                    alamatLengkap.setEnabled(false);
 
                     dialogResi.show();
 
@@ -247,9 +252,9 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
     private void addDataBuku() {
 
         ListBuku = new ArrayList<>();
-        ListBuku.add(new Buku("Killing Heningway", "Rp 10.000", "John Smith", "Abdullah Harits", "Mojolanggu", "2"));
-        ListBuku.add(new Buku("Buku Pintar Microsoft Office 2007 & 2010", "Rp 25.000", "Jarot S.", "Hilmi Aziz", "Sawojajar", "5"));
-        ListBuku.add(new Buku("Revolusi Belum Selesai", "Rp 15.000", "Budi Setiyono", "Irwan Kurniawan", "Tlogomas", "4"));
+        ListBuku.add(new Buku("Bulan", "Rp 10.000", "John Smith", "Muhammad Rizki", "Mojolanggu", "2"));
+        ListBuku.add(new Buku("Buku Pintar Microsoft Office 2007 & 2010", "Rp 25.000", "John Smith", "Muhammad Rizki", "Sawojajar", "5"));
+        ListBuku.add(new Buku("Revolusi Belum Selesai", "Rp 15.000", "Budi Setiyono", "Muhammad Rizki", "Tlogomas", "4"));
     }
 
     private void addStatusPengiriman() {

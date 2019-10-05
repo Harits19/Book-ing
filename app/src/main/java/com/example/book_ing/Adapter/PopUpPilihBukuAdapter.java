@@ -81,7 +81,7 @@ public class PopUpPilihBukuAdapter extends RecyclerView.Adapter<PopUpPilihBukuAd
         public BukuViewHolder(View itemView) {
             super(itemView);
             TextviewJudulBuku = itemView.findViewById(R.id.textview_judul_buku);
-            TextviewIsbnBuku = itemView.findViewById(R.id.textview_Isbn_buku);
+            TextviewIsbnBuku = itemView.findViewById(R.id.textview_pemilik);
             textViewPengarangBuku = itemView.findViewById(R.id.textview_pengarang_buku);
 
             buttonPilihBuku = itemView.findViewById(R.id.button_pilih_buku);

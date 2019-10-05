@@ -65,7 +65,7 @@ public class PesanAdapter extends RecyclerView.Adapter<PesanAdapter.PesanViewHol
 
         public PesanViewHolder(View itemView) {
             super(itemView);
-            TextviewPengirimPesan = itemView.findViewById(R.id.textview_pengirim_pesan);
+            TextviewPengirimPesan = itemView.findViewById(R.id.textview_nama_pengguna);
             TextviewRingkasanPesan = itemView.findViewById(R.id.textview_ringkasan_pesan);
             TextviewWaktuPesan = itemView.findViewById(R.id.textview_waktu_pesan);
             ImageViewPengirimPesan = itemView.findViewById(R.id.imageview_pengirim_pesan);

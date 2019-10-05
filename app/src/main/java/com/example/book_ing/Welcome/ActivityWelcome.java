@@ -14,6 +14,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 // Importing Google GMS Auth API Libraries.
+import com.example.book_ing.Activity.ActivityBottomNavigation;
+import com.example.book_ing.Fragment.FragmentAkun;
+import com.example.book_ing.Fragment.FragmentBeranda;
 import com.example.book_ing.R;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -40,10 +43,10 @@ public class ActivityWelcome extends AppCompatActivity {
     public static final int RequestSignInCode = 7;
 
     // Firebase Auth Object.
-    public FirebaseAuth firebaseAuth;
+    public static FirebaseAuth firebaseAuth;
 
     // Google API Client object.
-    public GoogleApiClient googleApiClient;
+    public static GoogleApiClient googleApiClient;
 
     // Sing out button.
     Button SignOutButton;
@@ -164,58 +167,58 @@ public class ActivityWelcome extends AppCompatActivity {
 
                 GoogleSignInAccount googleSignInAccount = googleSignInResult.getSignInAccount();
 
-//                FirebaseUserAuth(googleSignInAccount);
+                FirebaseUserAuth(googleSignInAccount);
             }
 
         }
     }
 
-//    public void FirebaseUserAuth(GoogleSignInAccount googleSignInAccount) {
+    public void FirebaseUserAuth(GoogleSignInAccount googleSignInAccount) {
+
+        AuthCredential authCredential = GoogleAuthProvider.getCredential(googleSignInAccount.getIdToken(), null);
+
+        Toast.makeText(ActivityWelcome.this,""+ authCredential.getProvider(),Toast.LENGTH_LONG).show();
+
+        firebaseAuth.signInWithCredential(authCredential)
+                .addOnCompleteListener(ActivityWelcome.this, new OnCompleteListener() {
+                    @Override
+                    public void onComplete(@NonNull Task AuthResultTask) {
+
+                        if (AuthResultTask.isSuccessful()){
+
+                            // Getting Current Login user details.
+                            FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+
+                            // Showing Log out button.
+                            SignOutButton.setVisibility(View.VISIBLE);
+
+                            // Hiding Login in button.
+                            signInButton.setVisibility(View.GONE);
+
+                            // Showing the TextView.
+                            LoginUserEmail.setVisibility(View.VISIBLE);
+                            LoginUserName.setVisibility(View.VISIBLE);
+
+//                            // Setting up name into TextView.
+//                            LoginUserName.setText("NAME =  "+ firebaseUser.getDisplayName().toString());
 //
-//        AuthCredential authCredential = GoogleAuthProvider.getCredential(googleSignInAccount.getIdToken(), null);
-//
-//        Toast.makeText(ActivityWelcome.this,""+ authCredential.getProvider(),Toast.LENGTH_LONG).show();
-//
-//        firebaseAuth.signInWithCredential(authCredential)
-//                .addOnCompleteListener(ActivityWelcome.this, new OnCompleteListener() {
-//                    @Override
-//                    public void onComplete(@NonNull Task AuthResultTask) {
-//
-//                        if (AuthResultTask.isSuccessful()){
-//
-//                            // Getting Current Login user details.
-//                            FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-//
-//                            // Showing Log out button.
-//                            SignOutButton.setVisibility(View.VISIBLE);
-//
-//                            // Hiding Login in button.
-//                            signInButton.setVisibility(View.GONE);
-//
-//                            // Showing the TextView.
-//                            LoginUserEmail.setVisibility(View.VISIBLE);
-//                            LoginUserName.setVisibility(View.VISIBLE);
-//
-////                            // Setting up name into TextView.
-////                            LoginUserName.setText("NAME =  "+ firebaseUser.getDisplayName().toString());
-////
-////                            // Setting up Email into TextView.
-////                            LoginUserEmail.setText("Email =  "+ firebaseUser.getEmail().toString());
-//
-////                            Toast.makeText(ActivityWelcome.this,firebaseUser.getDisplayName(),Toast.LENGTH_LONG).show();
-//
-//
-//                            Intent i = new Intent(ActivityWelcome.this, FragmentBeranda.class);
-//                            i.putExtra("displayName",firebaseUser.getDisplayName());
-//                            i.putExtra("displayEmail",firebaseUser.getEmail());
-//                            startActivity(i);
-//
-//                        }else {
-//                            Toast.makeText(ActivityWelcome.this,"Something Went Wrong",Toast.LENGTH_LONG).show();
-//                        }
-//                    }
-//                });
-//    }
+//                            // Setting up Email into TextView.
+//                            LoginUserEmail.setText("Email =  "+ firebaseUser.getEmail().toString());
+
+//                            Toast.makeText(ActivityWelcome.this,firebaseUser.getDisplayName(),Toast.LENGTH_LONG).show();
+
+
+                            Intent i = new Intent(ActivityWelcome.this, ActivityBottomNavigation.class);
+                            i.putExtra("displayName",firebaseUser.getDisplayName());
+                            i.putExtra("displayEmail",firebaseUser.getEmail());
+                            startActivity(i);
+
+                        }else {
+                            Toast.makeText(ActivityWelcome.this,"Something Went Wrong",Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+    }
 
     public void UserSignOutFunction() {
 

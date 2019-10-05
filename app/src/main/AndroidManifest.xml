@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Welcome.ActivityDaftar" />
-        <activity android:name=".Activity.ActivityBottomNavigation"/>
+        <activity android:name=".Activity.ActivityTransaksiPenukaran2"/>
         <activity android:name=".Activity.ActivityTantangan" />
         <activity android:name=".Activity.ActivityKatalogPenukaran" />
         <activity android:name=".Activity.ActivityKatalogPeminjaman" />
@@ -27,7 +27,7 @@
         <activity android:name=".Activity.ActivityDetailBukuPenukaran" />
         <activity android:name=".Activity.ActivityDetailBukuPeminjaman" />
         <activity android:name=".Activity.ActivityTambahSaldo" />
-        <activity android:name=".Activity.ActivityTransaksiPenukaran2">
+        <activity android:name=".Welcome.ActivityWelcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,7 +38,7 @@
         <activity android:name=".Welcome.ActivityMasuk" />
         <activity android:name=".Activity.ActivityTambahKoleksiBuku" />
         <activity android:name=".Activity.AlarmActivity" />
-        <activity android:name=".Welcome.ActivityWelcome" />
+        <activity android:name=".Activity.ActivityBottomNavigation" />
         <activity android:name=".Activity.TimerActivity" />
         <activity android:name=".Activity.MainActivity"/>
 

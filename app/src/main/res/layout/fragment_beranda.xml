@@ -148,12 +148,12 @@
                 android:text="Saldo : Rp 75.000"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageview_pengirim_pesan"
-                app:layout_constraintEnd_toEndOf="@+id/textview_pengirim_pesan"
-                app:layout_constraintStart_toStartOf="@+id/textview_pengirim_pesan"
-                app:layout_constraintTop_toBottomOf="@+id/textview_pengirim_pesan" />
+                app:layout_constraintEnd_toEndOf="@+id/textview_nama_pengguna"
+                app:layout_constraintStart_toStartOf="@+id/textview_nama_pengguna"
+                app:layout_constraintTop_toBottomOf="@+id/textview_nama_pengguna" />
 
             <TextView
-                android:id="@+id/textview_pengirim_pesan"
+                android:id="@+id/textview_nama_pengguna"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"

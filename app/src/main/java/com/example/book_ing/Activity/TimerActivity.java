@@ -43,7 +43,7 @@ public class TimerActivity extends AppCompatActivity {
 //            }
 //        }.start();
 
-        new CountDownTimer(300000, 1000) {
+        new CountDownTimer(900000, 1000) {
 
             public void onTick(long millisUntilFinished) {
 //                textView2.setText(" " + (millisUntilFinished / 1000)/60);

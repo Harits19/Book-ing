@@ -104,7 +104,7 @@ public class AlarmActivity extends AppCompatActivity {
         }
         mediaPlayer.prepareAsync();
 
-        info.setText("Snap a " + object + "!");
+
     }
 
     @Override

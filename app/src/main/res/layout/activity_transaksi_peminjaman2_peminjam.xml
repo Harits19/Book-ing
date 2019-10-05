@@ -58,7 +58,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
 
-                        android:text="Malang"
+
                         android:layout_marginTop="8dp"
                         android:background="@drawable/edittext_rounded"
                         android:completionThreshold="1"
@@ -78,7 +78,6 @@
                         android:hint="Kecamatan"
                         android:popupBackground="#fff"
                         android:textSize="16sp"
-                        android:text="Kedungkandang"
                         />
 
                     <EditText
@@ -91,7 +90,6 @@
                         android:hint="Alamat Lengkap"
                         android:popupBackground="#fff"
                         android:textSize="16sp"
-                        android:text="Jl. Sawojajar Gg 15 No 50"
                         />
 
 
@@ -202,16 +200,16 @@
                             android:text="Lama Peminjaman "
                             android:textSize="16sp" />
 
-<!--                        <Button-->
-<!--                            style="@style/CustomButton1"-->
-<!--                            android:id="@+id/button_tambah_hari"-->
-<!--                            android:layout_width="32dp"-->
-<!--                            android:layout_height="match_parent"-->
-<!--                            android:layout_gravity="right"-->
+                        <Button
+                            style="@style/CustomButton1"
+                            android:id="@+id/button_tambah_hari"
+                            android:layout_width="32dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
 
-<!--                            android:text="+"-->
+                            android:text="+"
 
-<!--                            android:textSize="12sp" />-->
+                            android:textSize="12sp" />
 
 
                         <TextView
@@ -222,19 +220,19 @@
                             android:gravity="center"
                             android:paddingLeft="8dp"
                             android:paddingRight="8dp"
-                            android:hint="2 Hari"
+                            android:hint="0 Hari"
                             android:textAlignment="center"
                             android:textColor="@color/colorPrimaryDark"
                             android:textColorHint="@color/colorPrimaryDark"
                             android:textSize="16sp" />
-<!--                        <Button-->
-<!--                            style="@style/CustomButton1"-->
-<!--                            android:id="@+id/button_kurang_hari"-->
-<!--                            android:layout_width="32dp"-->
-<!--                            android:layout_height="match_parent"-->
-<!--                            android:layout_gravity="left"-->
-<!--                            android:text="-"-->
-<!--                            android:textSize="12sp"/>-->
+                        <Button
+                            style="@style/CustomButton1"
+                            android:id="@+id/button_kurang_hari"
+                            android:layout_width="32dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:text="-"
+                            android:textSize="12sp"/>
 
 
 
@@ -249,24 +247,7 @@
                     android:orientation="vertical"
                     android:background="#fff"
                     android:padding="16dp"
-                    android:layout_height="wrap_content">
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-
-                        android:layout_height="wrap_content"
-                        android:text="Status Pengiriman"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerview_status_pengiriman_saya"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
-
-
-                </LinearLayout>
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
         </RelativeLayout>
 
@@ -279,7 +260,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:layout_alignParentBottom="true"
-        android:text="Kirim Buku"
+        android:text="Pinjam Buku"
         android:textAllCaps="false"
         android:textSize="16sp"/>
 

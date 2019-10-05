@@ -62,7 +62,7 @@
                     android:layout_height="26dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    android:text="20:00 (Durasi : 15 Menit)"
+                    android:text="16:30 (Durasi : 15 Menit)"
                     android:drawableLeft="@drawable/durasi"
                     android:drawablePadding="12dp"
                     android:textSize="16sp" />

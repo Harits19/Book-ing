@@ -55,7 +55,7 @@ public class ActivityWelcome extends AppCompatActivity {
     com.google.android.gms.common.SignInButton signInButton;
 
     // TextView to Show Login User Email and Name.
-    TextView LoginUserName, LoginUserEmail;
+//    TextView LoginUserName, LoginUserEmail;
 
     private Button ButtonMasuk, ButtonDaftar;
 
@@ -101,8 +101,8 @@ public class ActivityWelcome extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         // Hiding the TextView on activity start up time.
-        LoginUserEmail.setVisibility(View.GONE);
-        LoginUserName.setVisibility(View.GONE);
+//        LoginUserEmail.setVisibility(View.GONE);
+//        LoginUserName.setVisibility(View.GONE);
 
         // Creating and Configuring Google Sign In object.
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -133,14 +133,14 @@ public class ActivityWelcome extends AppCompatActivity {
         });
 
         // Adding Click Listener to User Sign Out button.
-        SignOutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                UserSignOutFunction();
-
-            }
-        });
+//        SignOutButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                UserSignOutFunction();
+//
+//            }
+//        });
 
     }
 
@@ -190,14 +190,14 @@ public class ActivityWelcome extends AppCompatActivity {
                             FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
 
                             // Showing Log out button.
-                            SignOutButton.setVisibility(View.VISIBLE);
+//                            SignOutButton.setVisibility(View.VISIBLE);
 
                             // Hiding Login in button.
                             signInButton.setVisibility(View.GONE);
 
                             // Showing the TextView.
-                            LoginUserEmail.setVisibility(View.VISIBLE);
-                            LoginUserName.setVisibility(View.VISIBLE);
+//                            LoginUserEmail.setVisibility(View.VISIBLE);
+//                            LoginUserName.setVisibility(View.VISIBLE);
 
 //                            // Setting up name into TextView.
 //                            LoginUserName.setText("NAME =  "+ firebaseUser.getDisplayName().toString());
@@ -242,8 +242,8 @@ public class ActivityWelcome extends AppCompatActivity {
         SignOutButton.setVisibility(View.GONE);
 
         // After logout setting up email and name to null.
-        LoginUserName.setText(null);
-        LoginUserEmail.setText(null);
+//        LoginUserName.setText(null);
+//        LoginUserEmail.setText(null);
 
         // After logout setting up login button visibility to visible.
         signInButton.setVisibility(View.VISIBLE);

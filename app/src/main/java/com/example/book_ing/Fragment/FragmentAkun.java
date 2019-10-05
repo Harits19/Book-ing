@@ -56,15 +56,15 @@ public class FragmentAkun extends Fragment {
         BukuAdapter myAdapter = new BukuAdapter(ListBukuKoleksi);
         RecyclerviewKoleksiBuku.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         RecyclerviewKoleksiBuku.setAdapter(myAdapter);
-        logout = view.findViewById(R.id.logout);
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                UserSignOutFunction();
-
-            }
-        });
+//        logout = view.findViewById(R.id.logout);
+//        logout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                UserSignOutFunction();
+//
+//            }
+//        });
         String name;
         if(savedInstanceState == null) {
             Bundle extras = getActivity().getIntent().getExtras();

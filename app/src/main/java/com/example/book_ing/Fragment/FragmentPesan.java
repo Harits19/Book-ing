@@ -41,7 +41,7 @@ public class FragmentPesan extends Fragment {
 
         ListPesan = new ArrayList<>();
         ListPesan.add(new Pesan("Abdullah Harits", "Saya ingin meminjam buku ini", "20 Oktober 2019", null));
-        ListPesan.add(new Pesan("Abdullah Harits", "Saya ingin meminjam buku ini", "20 Oktober 2019", null));
+        ListPesan.add(new Pesan("Aripue Habi", "Apa buku ini masih ada?", "21 Oktober 2019", null));
 
 
     }

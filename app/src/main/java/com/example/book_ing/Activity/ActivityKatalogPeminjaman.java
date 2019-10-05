@@ -56,8 +56,12 @@ public class ActivityKatalogPeminjaman extends AppCompatActivity {
 
         ListKatalogBuku = new ArrayList<>();
         ListKatalogBuku.add(new Buku("Bulan", "Rp 30.000", "Tere Liye", "Asroru Maula", "Lowokwaru", "2", getDrawable(R.drawable.buku)));
-        ListKatalogBuku.add(new Buku("Revolusi", "Rp 20.000", "Tan Malaka", "Asroru Maula", "Mojolanggu", "10", getDrawable(R.drawable.buku2)));
+        ListKatalogBuku.add(new Buku("Revolusi", "Rp 20.000", "Tan Malaka", "Abhista Maula", "Mojolanggu", "10", getDrawable(R.drawable.buku2)));
         ListKatalogBuku.add(new Buku("Office", "Rp 5.000", "John Smith", "Abdullah Harits", "Mojolanggu", "5", getDrawable(R.drawable.buku1)));
-
+        ListKatalogBuku.add(new Buku("Mantappu Jiwa", "Rp 30.000", "Jerome Polin", "Irwan Kurniawan", "Lowokwaru", "2", getDrawable(R.drawable.buku_mantappu)));
+        ListKatalogBuku.add(new Buku("Sebuah Seni Bersikap Bodo Amat", "Rp 20.000", "Tan Malaka", " Asroru Maula", "Mojolanggu", "10", getDrawable(R.drawable.buku_bodo)));
+        ListKatalogBuku.add(new Buku("Dilan 1990", "Rp 5.000", "John Smith", "Abhista Maula", "Mojolanggu", "5", getDrawable(R.drawable.buku_dilan1)));
+        ListKatalogBuku.add(new Buku("Dilan 1992", "Rp 20.000", "Tan Malaka", "Abdullah Harits", "Mojolanggu", "10", getDrawable(R.drawable.buku_dilan2)));
+        ListKatalogBuku.add(new Buku("Milea", "Rp 5.000", "John Smith", "Irwan Kurniawan", "Mojolanggu", "5", getDrawable(R.drawable.buku_dilan3)));
     }
 }

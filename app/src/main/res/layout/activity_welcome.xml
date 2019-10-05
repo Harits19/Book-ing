@@ -88,17 +88,22 @@
         tools:layout_editor_absoluteX="24dp">
 
         <Button
-            android:layout_width="fill_parent"
-            android:layout_height="32dp"
-            android:textAllCaps="false"
             android:id="@+id/button_facebook"
+            android:background="#3B5998"
+            android:layout_weight="1"
             android:layout_marginTop="16dp"
-            android:background="@drawable/facebook"/>
+            android:textColor="#fff"
+            android:drawableLeft="@drawable/ic_facebook_icon_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masuk Dengan Facebook"
+
+            android:textAllCaps="false"
+            android:textSize="16sp" />
 
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/sign_in_button"
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"

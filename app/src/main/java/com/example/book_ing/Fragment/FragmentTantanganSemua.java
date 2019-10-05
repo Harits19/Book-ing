@@ -41,7 +41,7 @@ public class FragmentTantanganSemua extends Fragment {
     void addDataTantanganPinjam(){
 
         ListTantangan = new ArrayList<>();
-        ListTantangan.add(new Tantangan("Killing Henninway", "2 Oktober 2019" ));
+        ListTantangan.add(new Tantangan("Killing Henninway", "2 Oktober 2019", getActivity().getDrawable(R.drawable.buku) ));
         ListTantangan.add(new Tantangan("Killing Henninway", "2 Oktober 2019"));
         ListTantangan.add(new Tantangan("Killing Henninway", "2 Oktober 2019"));
         ListTantangan.add(new Tantangan("Killing Henninway", "2 Oktober 2019"));

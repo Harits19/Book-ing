@@ -67,21 +67,21 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
         textViewLamaPeminjaman = findViewById(R.id.textView_lama_peminjaman);
 
 
-        buttonTambahHari.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                lamaPinjam++;
-                textViewLamaPeminjaman.setText(lamaPinjam + " Hari");
-            }
-        });
-
-        buttonKurangHari.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                lamaPinjam--;
-                textViewLamaPeminjaman.setText(lamaPinjam + " Hari");
-            }
-        });
+//        buttonTambahHari.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                lamaPinjam++;
+//                textViewLamaPeminjaman.setText(lamaPinjam + " Hari");
+//            }
+//        });
+//
+//        buttonKurangHari.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                lamaPinjam--;
+//                textViewLamaPeminjaman.setText(lamaPinjam + " Hari");
+//            }
+//        });
 
         textViewResi = findViewById(R.id.textView_resi);
 
@@ -98,6 +98,11 @@ public class ActivityTransaksiPenukaran2 extends AppCompatActivity {
 
         dialogResi.setContentView(sheetView);
         dialogResi.getWindow().setLayout(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT);
+
+
+        autoCompleteTextViewKecamatan.setEnabled(false);
+        autoCompleteTextViewKota.setEnabled(false);
+        alamatLengkap.setEnabled(false);
 
         buttonStatusTransaksi.setOnClickListener(new View.OnClickListener() {
             @Override

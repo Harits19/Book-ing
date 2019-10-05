@@ -45,7 +45,7 @@ public class ActivityDetailBukuPenukaran extends AppCompatActivity {
                 buttonLanjutkan.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        startActivity(new Intent(ActivityDetailBukuPenukaran.this, ActivityTransaksiPenukaran2.class));
+                        startActivity(new Intent(ActivityDetailBukuPenukaran.this, ActivityTransaksiPenukaran2_peminjam.class));
 
                     }
                 });
